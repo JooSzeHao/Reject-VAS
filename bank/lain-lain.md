@@ -35,7 +35,7 @@ Salam sejahtera,
 
 Keadaan yang anda alami perlu diperiksa oleh pegawai perubatan dengan segera, dan tidak boleh menunggu janji temu tahun hadapan.
 
-Sila dapatkan pemeriksaan di klinik kesihatan berdekatan dalam masa terdekat. Jika keadaan bertambah teruk, terus ke Jabatan Kecemasan. Bawa ubat dan kad temujanji anda.
+Sila hubungi klinik yang merawat anda untuk mendapatkan nasihat ke mana anda perlu pergi. Jika keadaan bertambah teruk, terus ke Jabatan Kecemasan.
 
 Jangan hentikan atau ubah dos ubat sendiri tanpa nasihat pegawai perubatan.
 
@@ -45,7 +45,7 @@ Terima kasih.
 
 **Rujukan:** Tiada. Tiada fail dalam knowledge/ meliputi gejala, kesan sampingan, atau cara memohon janji temu lebih awal.
 **Keyakinan:** Rendah
-**Nota pegawai:** Jawapan hendaklah pendek. Jangan ulang semula maklumat/gejala yang pesakit sendiri sudah nyatakan. Elak senarai bullet yang panjang. Tambah satu baris memaklumkan bahawa tiket sokongan MyUbat adalah untuk pertanyaan berkaitan VAS sahaja.
+**Nota pegawai:** Jawapan hendaklah pendek. Jangan ulang semula maklumat/gejala yang pesakit sendiri sudah nyatakan. Elak senarai bullet yang panjang. Tambah satu baris memaklumkan bahawa tiket sokongan MyUbat adalah untuk pertanyaan berkaitan VAS sahaja. Bagi masalah klinikal, rujuk pesakit kepada klinik yang merawat untuk nasihat ke mana perlu pergi — bukan terus ke klinik kesihatan berdekatan. Arahan ke Jabatan Kecemasan jika keadaan bertambah teruk adalah betul.
 **Status:** Perlu semakan farmasis
 
 <!-- Catatan dalaman: tiket klinikal, bukan soalan VAS. Draf hanya merujuk pesakit

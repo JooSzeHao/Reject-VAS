@@ -173,6 +173,10 @@ new reply unless asked.
 - **No clinical decisions.** Dosing, side effects, drug interactions, "should I stop
   this medicine", symptom advice — these go to a pharmacist or medical officer. Draft
   a reply that says so politely and directs the patient, nothing more.
+- **Where to send a clinical ticket:** tell the patient to **contact the clinic
+  treating them** for advice on where to seek help — that clinic knows their case and
+  can direct them properly. Do **not** send them to a nearby klinik kesihatan on your
+  own. If the condition worsens, directing them to **Jabatan Kecemasan** is correct.
 - **Never promise a date** for a delivery, appointment, or stock arrival unless a
   `knowledge/` file states it.
 - **Never write to `bank/` before the officer has seen the draft.**
