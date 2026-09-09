@@ -64,6 +64,14 @@ Style rules — these are not optional:
   the answer.
 - **Shorter is better.** Prefer 3–4 sentences over 6. Use bullets only when there
   are genuinely separate steps, and keep them to three at most.
+- **When the ticket is not about a VAS service** (clinical questions, appointments,
+  billing, anything outside Perkhidmatan Nilai Tambah), add this line before the
+  closing, exactly:
+
+  > Sila ambil maklum bahawa tiket sokongan MyUbat adalah untuk pertanyaan berkaitan Perkhidmatan Nilai Tambah (VAS) sahaja.
+
+  Place it after the answer, never instead of one — still route the patient to the
+  right person first.
 
 ### 4. State a confidence level
 

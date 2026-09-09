@@ -8,6 +8,16 @@ Hospital: Hospital Sultan Idris Shah (HSIS) Serdang, Selangor
 Semua permohonan dibuat melalui **aplikasi MyUbat**. Lihat `panduan-myubat.md`
 untuk langkah penggunaan aplikasi.
 
+## Skop tiket sokongan MyUbat
+
+**Tiket sokongan MyUbat adalah untuk pertanyaan berkaitan Perkhidmatan Nilai
+Tambah (VAS) sahaja.**
+
+Pertanyaan di luar skop — soalan klinikal, gejala, kesan sampingan ubat, temujanji
+pakar, bil dan bayaran hospital — perlu dirujuk kepada saluran yang betul (pegawai
+perubatan, farmasis, atau kaunter berkenaan). Maklumkan kepada pesakit tentang skop
+ini, tetapi tetap rujukkan mereka kepada pihak yang boleh membantu terlebih dahulu.
+
 ---
 
 ## Ringkasan empat perkhidmatan

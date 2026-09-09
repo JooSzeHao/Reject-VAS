@@ -39,11 +39,13 @@ Sila dapatkan pemeriksaan di klinik kesihatan berdekatan dalam masa terdekat. Ji
 
 Jangan hentikan atau ubah dos ubat sendiri tanpa nasihat pegawai perubatan.
 
+Sila ambil maklum bahawa tiket sokongan MyUbat adalah untuk pertanyaan berkaitan Perkhidmatan Nilai Tambah (VAS) sahaja.
+
 Terima kasih.
 
 **Rujukan:** Tiada. Tiada fail dalam knowledge/ meliputi gejala, kesan sampingan, atau cara memohon janji temu lebih awal.
 **Keyakinan:** Rendah
-**Nota pegawai:** Jawapan hendaklah pendek. Jangan ulang semula maklumat/gejala yang pesakit sendiri sudah nyatakan. Elak senarai bullet yang panjang.
+**Nota pegawai:** Jawapan hendaklah pendek. Jangan ulang semula maklumat/gejala yang pesakit sendiri sudah nyatakan. Elak senarai bullet yang panjang. Tambah satu baris memaklumkan bahawa tiket sokongan MyUbat adalah untuk pertanyaan berkaitan VAS sahaja.
 **Status:** Perlu semakan farmasis
 
 <!-- Catatan dalaman: tiket klinikal, bukan soalan VAS. Draf hanya merujuk pesakit
