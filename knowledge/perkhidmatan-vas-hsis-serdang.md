@@ -87,7 +87,10 @@ Waktu operasi:
 
 Lokasi:
 
-- **FPL Hospital Sultan Idris Shah Serdang**
+- **FPL Hospital Sultan Idris Shah Serdang** — booth pandu lalu terletak
+  **di sebelah Bangunan Pusat Jantung**. (Disahkan oleh pegawai, 9/9/2026.)
+  Nota: *Farmasi Klinik Pakar 1* ialah lokasi yang **dipilih dalam aplikasi
+  MyUbat**, bukan tempat pengambilan FPL — pesakit kerap keliru antara keduanya.
 - **FPL Hospital Cyberjaya — KHAMIS SAHAJA**
 
 ---
