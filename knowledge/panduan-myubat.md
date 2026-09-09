@@ -23,6 +23,10 @@ Tambah (VAS)** dan menguruskan bekalan ubat susulan.
 - Diperlukan semasa pendaftaran: **nombor MRN** pada pelekat kad temujanji.
   Di HSIS Serdang, MRN bermula dengan **SD** diikuti nombor (SDXXXXXXXX).
 - Tetapkan kata laluan semasa log masuk kali pertama.
+- **Satu nombor kad pengenalan hanya boleh didaftarkan dengan satu akaun MyUbat
+  sahaja.** Jika pesakit cuba mendaftar semula dan dimaklumkan akaun sudah wujud,
+  mereka perlu menggunakan akaun sedia ada dan set semula kata laluan.
+  (Disahkan oleh pegawai, 9/9/2026.)
 
 ## Log masuk
 

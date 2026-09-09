@@ -7,6 +7,7 @@ Untuk mencari: `grep -rin "kata kunci" bank/`
 
 | ID | Tarikh | Kategori | Soalan (ringkas) | Tag |
 |---|---|---|---|---|
+| [REG-0001](pendaftaran.md) | 2026-09-09 | Pendaftaran | Cuba daftar akaun, dimaklumkan akaun sudah wujud | akaun sedia ada, terlupa kata laluan |
 | [FPL-0001](fpl.md) | 2026-09-09 | FPL | Status permohonan, tukar tarikh, dan lokasi booth pandu lalu | status permohonan, tukar tarikh, lokasi booth |
 | [LL-0001](lain-lain.md) | 2026-09-09 | Lain-lain | Gula naik, kencing kerap, pening selepas pertukaran ubat | klinikal, rujuk farmasis, janji temu jauh |
 
