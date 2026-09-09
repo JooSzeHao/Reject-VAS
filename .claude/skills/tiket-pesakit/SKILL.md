@@ -59,6 +59,11 @@ Style rules — these are not optional:
 - Give **one concrete next step** where one applies: what to do, where to go, who to
   call, what to bring.
 - Answer only what was asked. Do not add unrequested advice.
+- **Do not repeat back the patient's own information.** They already know their
+  symptoms, dates and complaint — restating them wastes the reply. Go straight to
+  the answer.
+- **Shorter is better.** Prefer 3–4 sentences over 6. Use bullets only when there
+  are genuinely separate steps, and keep them to three at most.
 
 ### 4. State a confidence level
 

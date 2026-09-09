@@ -24,3 +24,28 @@ Awalan ID bagi fail ini ialah `LL`. Nombor bermula dari 0001 dan bertambah satu 
 ---
 
 <!-- Rekod bermula di bawah. Rekod baharu ditambah di hujung fail. -->
+
+## [LL-0001] 2026-09-09 — Gula naik, kencing kerap, pening selepas pertukaran ubat
+**Kategori:** LL · **Tag:** klinikal, kesan selepas tukar ubat, kencing manis, rujuk farmasis, janji temu jauh
+**Soalan pesakit:**
+> Selepas tukar ubat pada janji temu 27.8 itu hari, kencing manis saya naik sampai 15 dan kencing kerap sampai peringkat tak boleh tahan. Selain dari itu, sakit atas leher dan pening. Macam mana nak buat ya? Janji temu seterusnya setahun lagi.
+
+**Jawapan:**
+Salam sejahtera,
+
+Keadaan yang anda alami perlu diperiksa oleh pegawai perubatan dengan segera, dan tidak boleh menunggu janji temu tahun hadapan.
+
+Sila dapatkan pemeriksaan di klinik kesihatan berdekatan dalam masa terdekat. Jika keadaan bertambah teruk, terus ke Jabatan Kecemasan. Bawa ubat dan kad temujanji anda.
+
+Jangan hentikan atau ubah dos ubat sendiri tanpa nasihat pegawai perubatan.
+
+Terima kasih.
+
+**Rujukan:** Tiada. Tiada fail dalam knowledge/ meliputi gejala, kesan sampingan, atau cara memohon janji temu lebih awal.
+**Keyakinan:** Rendah
+**Nota pegawai:** Jawapan hendaklah pendek. Jangan ulang semula maklumat/gejala yang pesakit sendiri sudah nyatakan. Elak senarai bullet yang panjang.
+**Status:** Perlu semakan farmasis
+
+<!-- Catatan dalaman: tiket klinikal, bukan soalan VAS. Draf hanya merujuk pesakit
+kepada pemeriksaan; tiada nasihat dos atau gejala diberikan. Prosedur memohon janji
+temu lebih awal masih belum ada dalam knowledge/. -->

@@ -7,7 +7,7 @@ Untuk mencari: `grep -rin "kata kunci" bank/`
 
 | ID | Tarikh | Kategori | Soalan (ringkas) | Tag |
 |---|---|---|---|---|
-| _(tiada rekod lagi)_ | | | | |
+| [LL-0001](lain-lain.md) | 2026-09-09 | Lain-lain | Gula naik, kencing kerap, pening selepas pertukaran ubat | klinikal, rujuk farmasis, janji temu jauh |
 
 ## Kategori
 
