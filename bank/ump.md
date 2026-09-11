@@ -24,3 +24,22 @@ Awalan ID bagi fail ini ialah `UMP`. Nombor bermula dari 0001 dan bertambah satu
 ---
 
 <!-- Rekod bermula di bawah. Rekod baharu ditambah di hujung fail. -->
+
+## [UMP-0001] 2026-09-11 — Bila akan dapat bekalan ubat seterusnya
+**Kategori:** UMP · **Tag:** tarikh bekalan, status penghantaran, pos laju, nombor penjejakan
+**Soalan pesakit:**
+> Salam Tuan/Puan, bolehkah saya tahu bila saya akan mendapat bekalan ubat seterusnya?
+
+**Jawapan:**
+Salam sejahtera,
+
+Bekalan ubat anda yang seterusnya ditetapkan pada 16/9/2026, dan bungkusan akan diserahkan kepada Pos Laju hari ini.
+
+Nombor penjejakan akan dipaparkan dalam aplikasi MyUbat setelah ubat diposkan.
+
+Terima kasih.
+
+**Rujukan:** knowledge/perkhidmatan-vas-hsis-serdang.md (UMP — nombor penjejakan dipaparkan dalam MyUbat setelah ubat diposkan). Tarikh 16/9/2026 dan status penyerahan bungkusan disahkan oleh pegawai daripada rekod sistem.
+**Keyakinan:** Tinggi
+**Nota pegawai:** Tarikh bekalan dan status bungkusan diambil daripada rekod sistem. Bagi soalan "bila dapat ubat", semak rekod dahulu dan berikan tarikh sebenar — jangan hanya mengarahkan pesakit menyemak aplikasi sendiri.
+**Status:** Dihantar

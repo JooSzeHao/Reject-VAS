@@ -89,20 +89,29 @@ Then add, in one or two lines each:
 - **Untuk naikkan keyakinan:** which document or fact would settle it.
 - **Tidak dapat dijawab:** any part of the ticket no source can answer.
 
-### 5. Stop
+### 5. Ask for the record when the answer is in it
+
+Many tickets ("bila dapat ubat?", "kenapa tiada update?", "boleh tukar tarikh?")
+have a specific answer sitting in the system record that only the officer can see.
+Do **not** settle for telling the patient to go check the app themselves — draft the
+generic version, then **ask the officer for the record** (application status,
+scheduled date, parcel status). A reply naming the actual date is worth far more
+than one describing where to look.
+
+### 6. Stop
 
 Present the draft and wait. The officer will reply with corrections, local practice,
 or extra context. Do not write to the bank yet.
 
 ## Pass 2 — apply input, finalise, log
 
-### 6. Apply the officer's input
+### 7. Apply the officer's input
 
 Produce the **final** reply with their corrections applied. Show briefly what changed
 from the draft (one line per change). If they reply "ok" / "hantar" / "boleh" with no
 changes, the draft becomes the final answer unchanged.
 
-### 7. Redact, then log
+### 8. Redact, then log
 
 **Redaction is mandatory and happens before anything is written.** `bank/` is
 git-tracked and pushed, so no patient identifier may reach it. Replace:
@@ -155,7 +164,7 @@ touches anything clinical.
 
 Then add one row at the **top** of the table in `bank/INDEX.md` (newest first).
 
-### 8. Report back
+### 9. Report back
 
 Say: the ID assigned, the category file, and that the index row was added.
 
