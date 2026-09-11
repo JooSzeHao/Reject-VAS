@@ -43,3 +43,30 @@ Terima kasih.
 **Keyakinan:** Tinggi
 **Nota pegawai:** Tarikh bekalan dan status bungkusan diambil daripada rekod sistem. Bagi soalan "bila dapat ubat", semak rekod dahulu dan berikan tarikh sebenar — jangan hanya mengarahkan pesakit menyemak aplikasi sendiri.
 **Status:** Dihantar
+
+## [UMP-0002] 2026-09-11 — Aduan: menyangka bekalan ubat dibatalkan selepas permohonan lewat
+**Kategori:** UMP · **Tag:** permohonan lewat, permohonan tidak diterima, ambil di kaunter, aduan, salah faham
+**Soalan pesakit:**
+> Ada waktu kita terlupa, tapi tidak sepatutnya terus dibatalkan bekalan ubat. Ada ini cara hospital kerajaan mengendalinya? Apa rakyat tidak penting untuk mengundi?
+
+**Jawapan:**
+Salam sejahtera,
+
+Bekalan ubat anda tidak dibatalkan. Permohonan Ubat Melalui Pos (UMP) tidak diterima kerana dihantar lewat.
+
+Anda masih boleh mendapatkan ubat tersebut dengan mengambilnya sendiri di kaunter farmasi.
+
+Untuk permohonan akan datang, mohon Ubat Melalui Pos selewat-lewatnya 3 minggu sebelum ubat habis.
+
+Terima kasih.
+
+**Rujukan:** knowledge/perkhidmatan-vas-hsis-serdang.md (UMP — mohon selewatnya 3 minggu sebelum ubat habis). Sebab penolakan dan hak mengambil di kaunter disahkan oleh pegawai.
+**Keyakinan:** Tinggi
+**Nota pegawai:** Guna ayat ringkas "Permohonan UMP tidak diterima" — jangan berbelit dengan "yang tidak dapat diteruskan hanyalah...".
+**Status:** Dihantar
+
+<!-- Corak untuk tiket beremosi: pesakit menyangka BEKALAN UBAT dibatalkan, sedangkan
+yang ditolak hanyalah permohonan VAS. Betulkan salah faham itu dahulu, kemudian
+nyatakan pilihan mengambil di kaunter. Kenyataan berbaur politik dalam tiket tidak
+dijawab — pegawai tidak membantah pendekatan ini. Tiada ayat simpati dibuka; sahkan
+jika gaya rumah memerlukannya. -->
