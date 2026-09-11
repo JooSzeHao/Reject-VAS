@@ -56,13 +56,13 @@ Bekalan ubat anda tidak dibatalkan. Permohonan Ubat Melalui Pos (UMP) tidak dite
 
 Anda masih boleh mendapatkan ubat tersebut dengan mengambilnya sendiri di kaunter farmasi.
 
-Untuk permohonan akan datang, mohon Ubat Melalui Pos selewat-lewatnya 3 minggu sebelum ubat habis.
-
 Terima kasih.
 
 **Rujukan:** knowledge/perkhidmatan-vas-hsis-serdang.md (UMP — mohon selewatnya 3 minggu sebelum ubat habis). Sebab penolakan dan hak mengambil di kaunter disahkan oleh pegawai.
 **Keyakinan:** Tinggi
 **Nota pegawai:** Guna ayat ringkas "Permohonan UMP tidak diterima" — jangan berbelit dengan "yang tidak dapat diteruskan hanyalah...".
+Nasihat tempoh 3 minggu untuk permohonan akan datang dibuang — pesakit tidak
+bertanya mengenainya. Berhenti selepas menjawab apa yang ditanya.
 **Status:** Dihantar
 
 <!-- Corak untuk tiket beremosi: pesakit menyangka BEKALAN UBAT dibatalkan, sedangkan

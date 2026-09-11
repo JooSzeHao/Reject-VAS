@@ -58,7 +58,13 @@ Style rules — these are not optional:
 - **Polite but not stiff.** Use `anda`. Avoid bureaucratic officialese.
 - Give **one concrete next step** where one applies: what to do, where to go, who to
   call, what to bring.
-- Answer only what was asked. Do not add unrequested advice.
+- Answer only what was asked, then **stop**. This is the most common drafting
+  mistake — resist in particular:
+  - forward-looking advice ("untuk permohonan akan datang, mohon 3 minggu awal")
+  - related facts the patient did not ask for (operating hours, other services)
+  - steps for a problem they have not reported yet
+  Each is correct information in the wrong place. Offer it to the officer as an
+  optional addition instead of putting it in the draft.
 - **Do not repeat back the patient's own information.** They already know their
   symptoms, dates and complaint — restating them wastes the reply. Go straight to
   the answer.
