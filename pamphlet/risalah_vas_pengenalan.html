@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<title>Risalah Pengenalan VAS — HSIS Serdang</title>
+<style>
+  @page { size: A4; margin: 9mm 10mm 8mm 10mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Arial", "Helvetica", sans-serif;
+    color: #18202B;
+    font-size: 10.1pt;
+    line-height: 1.3;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  /* ---------- masthead ---------- */
+  .masthead {
+    background: #1F3864;
+    color: #fff;
+    padding: 6mm 7mm 5.5mm 7mm;
+    border-radius: 3mm;
+  }
+  .eyebrow {
+    font-size: 9.5pt; letter-spacing: .14em; text-transform: uppercase;
+    color: #A9C3E6; margin: 0 0 3mm 0; font-weight: bold;
+  }
+  h1 { font-size: 22pt; line-height: 1.08; margin: 0 0 3.5mm 0; font-weight: bold; }
+  h1 em { font-style: normal; color: #FFD166; }
+  .masthead p { margin: 0; font-size: 10.6pt; color: #DCE7F6; }
+
+  /* ---------- section headings ---------- */
+  h2 {
+    font-size: 12.6pt; color: #1F3864; margin: 5mm 0 2.4mm 0;
+    padding-bottom: 1.6mm; border-bottom: 1.6pt solid #1F3864;
+  }
+  h2 .num {
+    display: inline-block; background: #1F3864; color: #fff;
+    width: 6.6mm; height: 6.6mm; line-height: 6.6mm; text-align: center;
+    border-radius: 50%; font-size: 10.5pt; margin-right: 2.5mm;
+  }
+  .lede { font-size: 10.4pt; margin: 2.4mm 0 0 0; }
+
+  /* ---------- chooser ---------- */
+  table { border-collapse: collapse; width: 100%; }
+  .chooser td { vertical-align: top; padding: 1.9mm 2.6mm; border: 1pt solid #C6D2E3; }
+  .chooser tr:nth-child(even) td { background: #F2F6FC; }
+  .chooser .q { width: 51%; font-size: 10pt; }
+  .chooser .a { width: 49%; }
+  .chooser .q b { color: #1F3864; }
+  .pick { font-weight: bold; color: #0B5E3A; font-size: 10.4pt; display: block; margin-bottom: .8mm; }
+  .chooser .a span.note { font-size: 9.2pt; color: #46505E; }
+  .chooser th {
+    background: #1F3864; color: #fff; font-size: 10pt; text-align: left;
+    padding: 2.2mm 3mm; letter-spacing: .04em; text-transform: uppercase;
+  }
+
+  /* ---------- callout ---------- */
+  .callout {
+    margin-top: 3mm; border-left: 3mm solid #FFB703; background: #FFF6E0;
+    padding: 2.6mm 3.4mm; font-size: 9.8pt; border-radius: 0 2mm 2mm 0;
+  }
+  .callout b { color: #8A5300; }
+
+  /* ---------- compare ---------- */
+  .compare td, .compare th { border: 1pt solid #C6D2E3; padding: 1.8mm 2.6mm; font-size: 9.7pt; }
+  .compare th { background: #E7EEF8; color: #1F3864; font-size: 10pt; text-transform: uppercase; letter-spacing: .04em; }
+  .compare td:first-child { font-weight: bold; color: #1F3864; width: 30%; }
+  .compare .vas { background: #EAF7F0; font-weight: bold; color: #0B5E3A; }
+
+  /* ---------- faq ---------- */
+  .faq { margin-top: 2mm; }
+  .faq .item { margin-bottom: 2.3mm; font-size: 10.3pt; }
+  .faq .q { font-weight: bold; color: #1F3864; font-size: 10.5pt; margin-bottom: .6mm; }
+  .faq .a { margin: 0; }
+
+  /* ---------- decision box ---------- */
+  .decide { border: 2pt solid #1F3864; border-radius: 3mm; padding: 3.2mm 4mm 3.4mm 4mm; margin-top: 4mm; }
+  .decide h3 { margin: 0 0 2.3mm 0; font-size: 11.8pt; color: #1F3864; }
+  .opt { display: flex; align-items: flex-start; margin-bottom: 2mm; }
+  .box {
+    flex: 0 0 auto; width: 6.5mm; height: 6.5mm; border: 1.8pt solid #1F3864;
+    margin-right: 3.5mm; margin-top: .6mm; border-radius: 1mm;
+  }
+  .opt div b { color: #1F3864; }
+  .opt div .sub { display: block; font-size: 9.8pt; color: #46505E; }
+
+  /* ---------- where/when ---------- */
+  .hours td, .hours th { border: 1pt solid #C6D2E3; padding: 1.7mm 2.5mm; font-size: 9.6pt; }
+  .hours th { background: #1F3864; color: #fff; text-transform: uppercase; letter-spacing: .04em; font-size: 9.2pt; text-align: left; }
+  .hours td:first-child { font-weight: bold; color: #1F3864; }
+
+  /* ---------- footer ---------- */
+  .footer {
+    margin-top: 4mm; background: #1F3864; color: #fff; border-radius: 3mm;
+    padding: 3.4mm 4.5mm; display: flex; justify-content: space-between; align-items: center; gap: 6mm;
+  }
+  .footer .big { font-size: 12.6pt; font-weight: bold; }
+  .footer .sm { font-size: 9.2pt; line-height: 1.35; color: #C3D5EE; }
+  .fineprint { margin-top: 3mm; font-size: 8.6pt; color: #6B7683; text-align: center; }
+</style>
+</head>
+<body>
+
+<!-- ============================ PAGE 1 ============================ -->
+<div class="page">
+
+  <div class="masthead">
+    <p class="eyebrow">Jabatan Farmasi &middot; Hospital Sultan Idris Shah, Serdang</p>
+    <h1>Ubat susulan anda boleh<br><em>sampai tanpa beratur.</em></h1>
+    <p>Perkhidmatan Nilai Tambah Farmasi (VAS) &mdash; baca 2 minit, pilih satu, selesai hari ini.</p>
+  </div>
+
+  <h2><span class="num">1</span>Pilih baris yang sama dengan keadaan anda</h2>
+  <p class="lede">Anda tidak perlu tahu semua perkhidmatan. Cari satu baris yang paling menyerupai keadaan anda &mdash; itulah pilihan anda.</p>
+
+  <table class="chooser">
+    <tr>
+      <th>Keadaan anda</th>
+      <th>Pilihan yang sesuai</th>
+    </tr>
+    <tr>
+      <td class="q"><b>Rumah saya jauh</b> dan saya hanya ke hospital apabila ada temujanji.</td>
+      <td class="a"><span class="pick">Ubat Melalui Pos (UMP)</span><span class="note">Ubat dihantar terus ke rumah. Anda tidak perlu datang langsung untuk ambil ubat.</span></td>
+    </tr>
+    <tr>
+      <td class="q"><b>Saya tetap datang setiap bulan</b> untuk temujanji &mdash; pos tidak membantu saya.</td>
+      <td class="a"><span class="pick">Janji Temu Kaunter</span><span class="note">Ubat disiapkan lebih awal. Anda datang, ambil, terus balik &mdash; tanpa menunggu giliran dispens.</span></td>
+    </tr>
+    <tr>
+      <td class="q"><b>Saya memandu</b> dan tidak mahu susah cari parkir atau masuk ke bangunan.</td>
+      <td class="a"><span class="pick">Farmasi Pandu Lalu</span><span class="note">Berhenti di kaunter Pandu Lalu, tunjuk No. Rujukan, ambil ubat dari dalam kereta.</span></td>
+    </tr>
+    <tr>
+      <td class="q"><b>Saya bekerja</b> atau hanya lapang pada waktu malam / hujung minggu.</td>
+      <td class="a"><span class="pick">Locker4U (Lokar Ubat)</span><span class="note">Buka 24 jam di Farmasi Klinik Pakar 1. Ambil bila-bila masa dalam tempoh 3 hari.</span></td>
+    </tr>
+    <tr>
+      <td class="q"><b>Saya tiada telefon pintar</b> atau tidak biasa guna aplikasi.</td>
+      <td class="a"><span class="pick">Daftar melalui waris / staf</span><span class="note">Anak atau waris boleh mohon bagi pihak anda. Staf farmasi juga boleh bantu daftar di kaunter hari ini.</span></td>
+    </tr>
+  </table>
+
+  <div class="callout">
+    <b>Jika anda tetap perlu datang ke hospital setiap bulan:</b> jangan tolak VAS terus. Beritahu kami &mdash; kami akan semak sama ada bekalan ubat anda boleh dipanjangkan atau tarikh temujanji beberapa klinik boleh diselaraskan, supaya kunjungan anda benar-benar berkurang.
+  </div>
+
+  <h2><span class="num">2</span>Apa bezanya untuk anda</h2>
+  <table class="compare">
+    <tr>
+      <th>&nbsp;</th>
+      <th>Cara biasa di kaunter</th>
+      <th>Dengan VAS</th>
+    </tr>
+    <tr>
+      <td>Menunggu giliran</td>
+      <td>Menunggu ubat disediakan selepas serah preskripsi</td>
+      <td class="vas">Ubat sudah siap sebelum anda sampai</td>
+    </tr>
+    <tr>
+      <td>Perjalanan</td>
+      <td>Satu perjalanan khas hanya untuk ambil ubat</td>
+      <td class="vas">Dihantar ke rumah, atau digabung dengan temujanji</td>
+    </tr>
+    <tr>
+      <td>Waktu</td>
+      <td>Hanya waktu pejabat</td>
+      <td class="vas">Lokar 24 jam &middot; Pandu Lalu sehingga 7.00 petang</td>
+    </tr>
+    <tr>
+      <td>Ubat anda</td>
+      <td>Ubat yang sama</td>
+      <td class="vas">Ubat yang sama, disemak oleh ahli farmasi yang sama</td>
+    </tr>
+  </table>
+
+  <div class="fineprint">Risalah pengenalan &mdash; muka 1 daripada 2. Sila terbalikkan.</div>
+</div>
+
+<!-- ============================ PAGE 2 ============================ -->
+<div class="page">
+
+  <h2><span class="num">3</span>Soalan yang paling kerap ditanya</h2>
+  <div class="faq">
+    <div class="item">
+      <div class="q">"Saya tinggal berdekatan sahaja &mdash; senang datang sendiri."</div>
+      <p class="a">Boleh. Tetapi datang pun, anda masih perlu menunggu giliran. Pandu Lalu atau Lokar membenarkan anda singgah sekejap dan terus balik.</p>
+    </div>
+    <div class="item">
+      <div class="q">"Saya bimbang ubat salah atau tak cukup."</div>
+      <p class="a">Setiap bekalan disemak dua kali oleh ahli farmasi sebelum dihantar, dan senarai ubat disertakan. Jika ada apa-apa tidak kena, hubungi kami &mdash; kami akan betulkan tanpa kos.</p>
+    </div>
+    <div class="item">
+      <div class="q">"Kena bayar mahal untuk pos?"</div>
+      <p class="a">Ubat adalah percuma seperti biasa. Hanya caj kurier yang minimum dikenakan, dan itu pun lazimnya lebih murah daripada tambang atau parkir untuk satu perjalanan ke hospital. Jika kos menjadi masalah, pilih Lokar atau Pandu Lalu &mdash; kedua-duanya tiada caj.</p>
+    </div>
+    <div class="item">
+      <div class="q">"Kalau saya tiada di rumah masa pos sampai?"</div>
+      <p class="a">Anda boleh hantar ke alamat lain (pejabat, rumah anak), atau pilih Lokar 24 jam supaya anda sendiri tentukan bila mahu ambil.</p>
+    </div>
+    <div class="item">
+      <div class="q">"Kalau saya nak jumpa ahli farmasi untuk tanya tentang ubat?"</div>
+      <p class="a">Boleh. Kaunseling ubat tetap disediakan &mdash; secara bersemuka semasa temujanji anda, atau melalui talian farmasi.</p>
+    </div>
+  </div>
+
+  <div class="decide">
+    <h3>Keputusan anda hari ini &mdash; tandakan satu</h3>
+
+    <div class="opt">
+      <div class="box"></div>
+      <div><b>YA &mdash; saya mahu cuba.</b>
+        <span class="sub">Beritahu staf di kaunter sekarang. Pendaftaran mengambil masa lebih kurang 5 minit dan kami buatkan untuk anda.</span></div>
+    </div>
+
+    <div class="opt">
+      <div class="box"></div>
+      <div><b>SAYA BERMINAT &mdash; tetapi mahu baca dahulu.</b>
+        <span class="sub">Minta <i>Panduan Lengkap MyUBAT</i> daripada staf. Ia mengandungi langkah demi langkah pendaftaran dan permohonan.</span></div>
+    </div>
+
+    <div class="opt">
+      <div class="box"></div>
+      <div><b>BELUM &mdash; saya mahu kekal ambil di kaunter.</b>
+        <span class="sub">Tiada masalah. Staf akan merekodkan sebab anda supaya kami boleh memperbaiki perkhidmatan. Tawaran ini kekal terbuka pada bila-bila masa.</span></div>
+    </div>
+  </div>
+
+  <h2><span class="num">4</span>Waktu &amp; lokasi pengambilan di HSIS Serdang</h2>
+  <table class="hours">
+    <tr>
+      <th>Perkhidmatan</th>
+      <th>Waktu (Isnin &ndash; Jumaat)</th>
+      <th>Lokasi</th>
+      <th>Mohon awal</th>
+    </tr>
+    <tr><td>Janji Temu Kaunter</td><td>8.00 pagi &ndash; 5.00 petang</td><td>Farmasi Klinik Pakar 1 / Pakar 2</td><td>&mdash;</td></tr>
+    <tr><td>Farmasi Pandu Lalu</td><td>12.00 tengah hari &ndash; 7.00 petang</td><td>Kaunter Pandu Lalu HSIS</td><td>7 hari bekerja</td></tr>
+    <tr><td>Locker4U (Lokar)</td><td>24 jam (simpanan 3 hari)</td><td>Lokar Farmasi Klinik Pakar 1</td><td>5 hari bekerja</td></tr>
+    <tr><td>Ubat Melalui Pos</td><td>Dihantar ke alamat pilihan</td><td>&mdash;</td><td>3 &ndash; 4 minggu</td></tr>
+  </table>
+
+  <div class="callout">
+    <b>Satu perkara penting:</b> mohon <b>sebelum</b> ubat anda habis &mdash; sekurang-kurangnya 3 hingga 4 minggu awal bagi pos. Setiap permohonan disemak dalam tempoh 3 hingga 5 hari bekerja.
+  </div>
+
+  <div class="footer">
+    <div>
+      <div class="big">Bertanya? 03-8947 5555 (samb. 1113)</div>
+      <div class="sm">Jabatan Farmasi, Hospital Sultan Idris Shah, Serdang<br>Atau guna menu &ldquo;Meja Bantuan&rdquo; dalam aplikasi MyUBAT</div>
+    </div>
+    <div class="sm" style="text-align:right; flex:0 0 42mm;">Imbas kod QR MyUBAT di kaunter farmasi untuk muat turun aplikasi.</div>
+  </div>
+
+  <div class="fineprint">Risalah Pengenalan VAS &mdash; muka 2 daripada 2 &middot; Panduan langkah demi langkah disediakan dalam risalah penuh <i>Panduan Lengkap MyUBAT</i>.</div>
+</div>
+
+</body>
+</html>
