@@ -56,6 +56,12 @@ Style rules — these are not optional:
 - **Everyday Bahasa Malaysia.** No jargon. Expand an acronym once on first use
   ("Ubat Melalui Pos (UMP)"). No English filler where a common BM word exists.
 - **Polite but not stiff.** Use `anda`. Avoid bureaucratic officialese.
+- **Apologise only when something went wrong on our side** — a lost or delayed
+  parcel, an error in the supply, a service failure. Open with
+  `Mohon maaf atas kelewatan ini.` or similar, then go straight to what is being
+  done about it. Do **not** apologise when the patient missed a deadline, forgot to
+  apply, or misunderstood a rule: correcting the misunderstanding plainly is the
+  respectful response, and an apology there implies a fault that does not exist.
 - Give **one concrete next step** where one applies: what to do, where to go, who to
   call, what to bring.
 - Answer only what was asked, then **stop**. This is the most common drafting

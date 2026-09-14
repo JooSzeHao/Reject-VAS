@@ -70,3 +70,27 @@ yang ditolak hanyalah permohonan VAS. Betulkan salah faham itu dahulu, kemudian
 nyatakan pilihan mengambil di kaunter. Kenyataan berbaur politik dalam tiket tidak
 dijawab — pegawai tidak membantah pendekatan ini. Tiada ayat simpati dibuka; sahkan
 jika gaya rumah memerlukannya. -->
+
+## [UMP-0003] 2026-09-14 — Ubat tidak sampai pada tarikh dijangka, bungkusan disyaki hilang
+**Kategori:** UMP · **Tag:** bungkusan hilang, pos semula, kelewatan penghantaran, cod, nombor penjejakan
+**Soalan pesakit:**
+> Ubat sepatutnya sampai pada 11 September, tetapi sehingga hari ini (11 September) saya masih belum menerimanya. Saya sertakan tangkapan skrin status penghantaran COD yang menyatakan bungkusan akan diserahkan kepada kurier. (Soalan asal dalam bahasa Inggeris.)
+
+**Jawapan:**
+Salam sejahtera,
+
+Mohon maaf atas kelewatan ini. Bungkusan anda disyaki hilang semasa penghantaran.
+
+Kami akan memposkan semula bekalan ubat anda hari ini. Nombor penjejakan baharu akan dipaparkan dalam aplikasi MyUbat setelah ubat diposkan.
+
+Terima kasih.
+
+**Rujukan:** knowledge/perkhidmatan-vas-hsis-serdang.md (UMP — nombor penjejakan dipaparkan dalam MyUbat setelah ubat diposkan). Status bungkusan disyaki hilang dan keputusan pos semula disahkan oleh pegawai.
+**Keyakinan:** Tinggi
+**Nota pegawai:** Betul untuk memohon maaf dalam kes ini — kegagalan di pihak kami. Berbeza dengan UMP-0002 (pesakit lewat memohon) yang tidak memerlukan permohonan maaf.
+**Status:** Dihantar
+
+<!-- Corak: bungkusan hilang. Akui masalah, mohon maaf, nyatakan tindakan (pos
+semula) dan beritahu nombor penjejakan baharu akan muncul dalam MyUbat.
+Nota: soalan pesakit dalam bahasa Inggeris, jawapan tetap dalam Bahasa Malaysia
+mengikut keputusan pegawai semasa penyediaan sistem ini. -->
