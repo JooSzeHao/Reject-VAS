@@ -15,48 +15,61 @@
   .page { page-break-after: always; }
   .page:last-child { page-break-after: auto; }
 
-  .masthead { border-bottom: 3pt solid #000; padding-bottom: 4mm; margin-bottom: 6mm; }
+  /* ---------- masthead with QR + wordmark ---------- */
+  .masthead {
+    display: flex; align-items: flex-start; gap: 8mm;
+    border-bottom: 3pt solid #000; padding-bottom: 4mm; margin-bottom: 6mm;
+  }
+  .masthead .words { flex: 1 1 auto; }
   .eyebrow { font-size: 9pt; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 3mm 0; }
-  h1 { font-size: 29pt; line-height: 1.05; margin: 0 0 3mm 0; }
+  h1 { font-size: 27pt; line-height: 1.05; margin: 0 0 3mm 0; }
   .masthead p.sub { margin: 0; font-size: 11.5pt; }
 
+  .brand { flex: 0 0 auto; width: 30mm; text-align: center; }
+  .wordmark {
+    border: 1.5pt solid #000; padding: 1.6mm 0; font-size: 13pt; font-weight: bold;
+    letter-spacing: .02em; margin-bottom: 2mm;
+  }
+  .wordmark span { font-weight: normal; }
+  .brand img { width: 26mm; height: 26mm; display: block; margin: 0 auto; }
+  .brand .cap { font-size: 8.5pt; margin-top: 1.2mm; line-height: 1.25; }
+
   h2 { font-size: 13pt; text-transform: uppercase; letter-spacing: .05em;
-       margin: 7mm 0 3mm 0; padding-bottom: 1.5mm; border-bottom: 1.5pt solid #000; }
+       margin: 6mm 0 2.6mm 0; padding-bottom: 1.4mm; border-bottom: 1.5pt solid #000; }
+  h2.first { margin-top: 0; }
 
   table { border-collapse: collapse; width: 100%; }
 
-  .chooser td { vertical-align: top; padding: 3mm 3.5mm; border-bottom: .75pt solid #000; font-size: 11pt; }
+  .chooser td { vertical-align: top; padding: 2.7mm 3.5mm; border-bottom: .75pt solid #000; font-size: 11pt; }
   .chooser tr:first-child td { border-top: .75pt solid #000; }
   .chooser .q { width: 50%; }
   .chooser .a { width: 50%; border-left: .75pt solid #000; }
   .pick { font-weight: bold; display: block; }
   .note { font-size: 10pt; color: #333; }
 
-  .callout { margin-top: 5mm; border: 1.5pt solid #000; padding: 3.5mm 4mm; font-size: 10.5pt; }
+  .callout { margin-top: 4mm; border: 1.5pt solid #000; padding: 3mm 3.5mm; font-size: 10.2pt; }
 
-  .faq p { margin: 0 0 3.5mm 0; font-size: 11pt; }
+  .faq p { margin: 0 0 2.4mm 0; font-size: 10.4pt; }
   .faq b { display: block; }
 
-  .decide { border: 2.5pt solid #000; padding: 4mm 5mm; margin-top: 6mm; }
-  .decide h3 { margin: 0 0 4mm 0; font-size: 13pt; text-transform: uppercase; letter-spacing: .05em; }
-  .opt { display: flex; align-items: flex-start; margin-bottom: 3.5mm; }
+  .decide { border: 2.5pt solid #000; padding: 3.5mm 4.5mm; margin-top: 5mm; }
+  .decide h3 { margin: 0 0 3.2mm 0; font-size: 12.4pt; text-transform: uppercase; letter-spacing: .05em; }
+  .opt { display: flex; align-items: flex-start; margin-bottom: 2.6mm; }
   .opt:last-child { margin-bottom: 0; }
   .box { flex: 0 0 auto; width: 7mm; height: 7mm; border: 1.5pt solid #000; margin-right: 4mm; margin-top: .5mm; }
-  .opt b { display: block; font-size: 11.5pt; }
+  .opt b { display: block; font-size: 11pt; }
   .opt .sub { font-size: 10pt; color: #333; }
+  .rule { border-top: .75pt solid #000; margin: 2.6mm 0 2.6mm 11mm; }
 
-  .hours td, .hours th { border: .75pt solid #000; padding: 2.4mm 3mm; font-size: 10.5pt; }
+  .hours td, .hours th { border: .75pt solid #000; padding: 2.1mm 3mm; font-size: 10.2pt; }
   .hours th { background: #E6E6E6; text-align: left; font-size: 9.5pt; text-transform: uppercase; letter-spacing: .05em; }
   .hours td:first-child { font-weight: bold; }
 
-  .contact { display: flex; align-items: center; gap: 7mm; border-top: 3pt solid #000; margin-top: 7mm; padding-top: 4mm; }
-  .contact img { width: 30mm; height: 30mm; }
+  .contact { border-top: 3pt solid #000; margin-top: 5mm; padding-top: 3.5mm; }
   .contact .big { font-size: 17pt; font-weight: bold; line-height: 1.2; }
   .contact .sm { font-size: 10.5pt; margin-top: 2mm; }
-  .qrcap { font-size: 9pt; text-align: center; margin-top: 1.5mm; width: 30mm; }
-  .qrwrap { flex: 0 0 auto; }
 
-  .fineprint { margin-top: 4mm; font-size: 8.5pt; color: #555; text-align: center; }
+  .fineprint { margin-top: 3mm; font-size: 8.5pt; color: #555; text-align: center; }
 </style>
 </head>
 <body>
@@ -65,9 +78,16 @@
 <div class="page">
 
   <div class="masthead">
-    <p class="eyebrow">Jabatan Farmasi &middot; Hospital Sultan Idris Shah, Serdang</p>
-    <h1>Ambil ubat susulan<br>tanpa beratur.</h1>
-    <p class="sub">Perkhidmatan Nilai Tambah Farmasi (VAS)</p>
+    <div class="words">
+      <p class="eyebrow">Jabatan Farmasi &middot; Hospital Sultan Idris Shah, Serdang</p>
+      <h1>Ambil ubat susulan<br>tanpa beratur.</h1>
+      <p class="sub">Perkhidmatan Nilai Tambah Farmasi (VAS)</p>
+    </div>
+    <div class="brand">
+      <div class="wordmark">My<span>UBAT</span></div>
+      <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMzAiIGhlaWdodD0iMzMwIiBjbGFzcz0ic2Vnbm8iPjxwYXRoIHRyYW5zZm9ybT0ic2NhbGUoMTApIiBjbGFzcz0icXJsaW5lIiBzdHJva2U9IiMwMDAiIGQ9Ik0yIDIuNWg3bTEgMGgxbTIgMGgxbTIgMGg1bTEgMGgxbTEgMGg3bS0yOSAxaDFtNSAwaDFtMSAwaDFtMiAwaDJtMSAwaDFtNyAwaDFtNSAwaDFtLTI5IDFoMW0xIDBoM20xIDBoMW0yIDBoM20yIDBoM20yIDBoMm0xIDBoMW0xIDBoM20xIDBoMW0tMjkgMWgxbTEgMGgzbTEgMGgxbTMgMGgxbTEgMGgzbTEgMGgybTQgMGgxbTEgMGgzbTEgMGgxbS0yOSAxaDFtMSAwaDNtMSAwaDFtMiAwaDFtNCAwaDFtMiAwaDRtMSAwaDFtMSAwaDNtMSAwaDFtLTI5IDFoMW01IDBoMW0yIDBoMW0zIDBoNW0yIDBoMW0xIDBoMW01IDBoMW0tMjkgMWg3bTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGg3bS0yMCAxaDFtMSAwaDRtMSAwaDFtMSAwaDFtLTE4IDFoMW00IDBoM20xIDBoMW0xIDBoMm0zIDBoMW0xIDBoM201IDBoMm0tMjkgMWgxbTMgMGgybTIgMGgzbTEgMGgybTIgMGgxbTEgMGgybTEgMGgxbTEgMGgybTEgMGgybS0yMiAxaDFtMyAwaDFtMSAwaDFtMiAwaDRtMSAwaDRtMSAwaDFtLTI1IDFoMm0xIDBoMW0zIDBoMW0xIDBoM20yIDBoMW0yIDBoM20xIDBoMW0xIDBoMm0tMjYgMWgxbTEgMGgxbTIgMGg0bTEgMGgxbTMgMGgybTUgMGgybTQgMGgxbS0yNyAxaDJtNCAwaDFtMiAwaDJtMSAwaDJtMSAwaDVtMSAwaDFtMSAwaDJtMiAwaDFtLTI5IDFoMW0zIDBoMW0xIDBoMW0xIDBoMm0xIDBoMm0xIDBoMm00IDBoNG0tMjMgMWgxbTEgMGgybTIgMGgzbTIgMGgxbTEgMGgzbTQgMGgybTEgMGgzbTEgMGgxbS0yOSAxaDJtMSAwaDFtMSAwaDVtMSAwaDVtMSAwaDFtMSAwaDFtMSAwaDFtMyAwaDRtLTI5IDFoMm0xIDBoM20yIDBoM20xIDBoMm0yIDBoMW0yIDBoMm0xIDBoM20zIDBoMW0tMjkgMWgybTEgMGgxbTEgMGg0bTIgMGg0bTEgMGg0bTQgMGgybTIgMGgxbS0yOSAxaDFtMiAwaDNtMyAwaDFtMSAwaDFtMiAwaDNtMiAwaDRtMSAwaDJtMiAwaDFtLTI5IDFoMW0xIDBoMW0yIDBoMm0yIDBoMm0zIDBoMW0xIDBoMm0yIDBoNW0xIDBoMW0xIDBoMW0tMjEgMWgxbTEgMGgzbTIgMGgxbTEgMGgxbTIgMGgxbTMgMGgzbS0yNyAxaDdtMSAwaDJtMyAwaDNtMiAwaDNtMSAwaDFtMSAwaDFtLTI1IDFoMW01IDBoMW02IDBoNG0yIDBoMm0zIDBoMm0tMjYgMWgxbTEgMGgzbTEgMGgxbTUgMGgxbTMgMGg5bTIgMGgybS0yOSAxaDFtMSAwaDNtMSAwaDFtMiAwaDJtMSAwaDFtNSAwaDNtMiAwaDFtMSAwaDNtLTI4IDFoMW0xIDBoM20xIDBoMW0yIDBoMW0zIDBoMW0xIDBoMW0zIDBoN20xIDBoMW0tMjggMWgxbTUgMGgxbTEgMGgybTEgMGgzbTIgMGgxbTEgMGgxbTIgMGgxbTIgMGgzbTEgMGgxbS0yOSAxaDdtMiAwaDFtMSAwaDVtMSAwaDNtMSAwaDJtMSAwaDFtMSAwaDEiLz48L3N2Zz4K" alt="Kod QR MyUBAT">
+      <div class="cap">Imbas untuk<br>muat turun aplikasi</div>
+    </div>
   </div>
 
   <h2>Cari baris yang sama dengan anda</h2>
@@ -99,26 +119,9 @@
     <b>Temujanji hampir setiap bulan?</b> Beritahu kami. Kami semak sama ada bekalan ubat anda boleh dipanjangkan, supaya kunjungan anda betul-betul berkurang.
   </div>
 
-  <h2>Soalan lazim</h2>
-  <div class="faq">
-    <p><b>&ldquo;Rumah saya dekat sahaja.&rdquo;</b>Datang pun, anda masih menunggu giliran. Pandu Lalu dan Lokar tidak.</p>
-    <p><b>&ldquo;Bimbang ubat salah atau tak cukup.&rdquo;</b>Setiap bekalan disemak ahli farmasi sebelum dihantar. Ada masalah, kami betulkan tanpa kos.</p>
-    <p><b>&ldquo;Mahal ke bayar pos?&rdquo;</b>Ubat tetap percuma. Hanya caj kurier minimum. Lokar dan Pandu Lalu tiada caj langsung.</p>
-    <p><b>&ldquo;Kalau saya tiada di rumah?&rdquo;</b>Hantar ke alamat lain, atau pilih Lokar 24 jam.</p>
-    <p><b>&ldquo;Saya nak jumpa ahli farmasi.&rdquo;</b>Kaunseling tetap ada &mdash; semasa temujanji anda atau melalui telefon.</p>
-  </div>
-
-  <div class="fineprint">Muka 1 daripada 2 &middot; sila terbalikkan</div>
-</div>
-
-<!-- ===================== MUKA 2 ===================== -->
-<div class="page">
-
-  <h2 style="margin-top:0">Waktu &amp; lokasi di HSIS Serdang</h2>
+  <h2>Waktu &amp; lokasi di HSIS Serdang</h2>
   <table class="hours">
-    <tr>
-      <th>Perkhidmatan</th><th>Waktu</th><th>Lokasi</th><th>Mohon awal</th>
-    </tr>
+    <tr><th>Perkhidmatan</th><th>Waktu</th><th>Lokasi</th><th>Mohon awal</th></tr>
     <tr><td>Farmasi Pandu Lalu</td><td>12.00 t.hari &ndash; 7.00 ptg<br>(Isnin &ndash; Jumaat)</td><td>Kaunter Pandu Lalu HSIS</td><td>7 hari bekerja</td></tr>
     <tr><td>Locker4U</td><td>24 jam<br>(simpanan 3 hari)</td><td>Lokar Farmasi Klinik Pakar 1</td><td>5 hari bekerja</td></tr>
     <tr><td>Ubat Melalui Pos</td><td>Dihantar ke alamat pilihan</td><td>&mdash;</td><td>3 &ndash; 4 minggu</td></tr>
@@ -128,14 +131,40 @@
     <b>Mohon sebelum ubat habis.</b> Sekurang-kurangnya 3 hingga 4 minggu awal bagi pos. Setiap permohonan disemak dalam 3 hingga 5 hari bekerja.
   </div>
 
+  <div class="fineprint">Muka 1 daripada 2 &middot; sila terbalikkan</div>
+</div>
+
+<!-- ===================== MUKA 2 ===================== -->
+<div class="page">
+
+  <h2 class="first">Soalan lazim</h2>
+  <div class="faq">
+    <p><b>&ldquo;Kalau saya tak suka, boleh berhenti?&rdquo;</b>Boleh, bila-bila masa. Tiada ikatan &mdash; anda kembali ke kaunter seperti biasa.</p>
+    <p><b>&ldquo;Semua ubat boleh?&rdquo;</b>Kebanyakan ubat susulan boleh. Ubat sejuk dan ubat kawalan perlu diambil di kaunter &mdash; staf akan maklumkan.</p>
+    <p><b>&ldquo;Bimbang ubat salah atau tak cukup.&rdquo;</b>Setiap bekalan disemak ahli farmasi sebelum dihantar. Ada masalah, kami betulkan tanpa kos.</p>
+    <p><b>&ldquo;Mahal ke bayar pos?&rdquo;</b>Ubat tetap percuma. Hanya caj kurier minimum. Lokar dan Pandu Lalu tiada caj langsung.</p>
+    <p><b>&ldquo;Macam mana saya tahu ubat dah dipos?&rdquo;</b>Nombor jejak dipaparkan dalam aplikasi MyUBAT sebaik ubat dihantar.</p>
+    <p><b>&ldquo;Kalau saya tiada di rumah?&rdquo;</b>Hantar ke alamat lain, atau pilih Lokar 24 jam.</p>
+    <p><b>&ldquo;Boleh orang lain ambil untuk saya?&rdquo;</b>Boleh. Bawa No. Rujukan MyUBAT dan kad pengenalan.</p>
+    <p><b>&ldquo;Saya nak jumpa ahli farmasi.&rdquo;</b>Kaunseling tetap ada &mdash; semasa temujanji anda atau melalui telefon.</p>
+  </div>
+
   <div class="decide">
     <h3>Keputusan anda hari ini &mdash; tandakan satu</h3>
 
     <div class="opt">
       <div class="box"></div>
-      <div><b>YA &mdash; daftarkan saya.</b>
-        <span class="sub">Beritahu staf sekarang. Lebih kurang 5 minit.</span></div>
+      <div><b>YA &mdash; saya daftar sendiri.</b>
+        <span class="sub">Imbas kod QR di muka hadapan dan daftar MyUBAT.</span></div>
     </div>
+
+    <div class="opt">
+      <div class="box"></div>
+      <div><b>YA &mdash; tolong daftarkan saya.</b>
+        <span class="sub">Staf akan bantu daftar di kaunter sekarang. Lebih kurang 5 minit.</span></div>
+    </div>
+
+    <div class="rule"></div>
 
     <div class="opt">
       <div class="box"></div>
@@ -151,15 +180,9 @@
   </div>
 
   <div class="contact">
-    <div class="qrwrap">
-      <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMzAiIGhlaWdodD0iMzMwIiBjbGFzcz0ic2Vnbm8iPjxwYXRoIHRyYW5zZm9ybT0ic2NhbGUoMTApIiBjbGFzcz0icXJsaW5lIiBzdHJva2U9IiMwMDAiIGQ9Ik0yIDIuNWg3bTEgMGgxbTIgMGgxbTIgMGg1bTEgMGgxbTEgMGg3bS0yOSAxaDFtNSAwaDFtMSAwaDFtMiAwaDJtMSAwaDFtNyAwaDFtNSAwaDFtLTI5IDFoMW0xIDBoM20xIDBoMW0yIDBoM20yIDBoM20yIDBoMm0xIDBoMW0xIDBoM20xIDBoMW0tMjkgMWgxbTEgMGgzbTEgMGgxbTMgMGgxbTEgMGgzbTEgMGgybTQgMGgxbTEgMGgzbTEgMGgxbS0yOSAxaDFtMSAwaDNtMSAwaDFtMiAwaDFtNCAwaDFtMiAwaDRtMSAwaDFtMSAwaDNtMSAwaDFtLTI5IDFoMW01IDBoMW0yIDBoMW0zIDBoNW0yIDBoMW0xIDBoMW01IDBoMW0tMjkgMWg3bTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGg3bS0yMCAxaDFtMSAwaDRtMSAwaDFtMSAwaDFtLTE4IDFoMW00IDBoM20xIDBoMW0xIDBoMm0zIDBoMW0xIDBoM201IDBoMm0tMjkgMWgxbTMgMGgybTIgMGgzbTEgMGgybTIgMGgxbTEgMGgybTEgMGgxbTEgMGgybTEgMGgybS0yMiAxaDFtMyAwaDFtMSAwaDFtMiAwaDRtMSAwaDRtMSAwaDFtLTI1IDFoMm0xIDBoMW0zIDBoMW0xIDBoM20yIDBoMW0yIDBoM20xIDBoMW0xIDBoMm0tMjYgMWgxbTEgMGgxbTIgMGg0bTEgMGgxbTMgMGgybTUgMGgybTQgMGgxbS0yNyAxaDJtNCAwaDFtMiAwaDJtMSAwaDJtMSAwaDVtMSAwaDFtMSAwaDJtMiAwaDFtLTI5IDFoMW0zIDBoMW0xIDBoMW0xIDBoMm0xIDBoMm0xIDBoMm00IDBoNG0tMjMgMWgxbTEgMGgybTIgMGgzbTIgMGgxbTEgMGgzbTQgMGgybTEgMGgzbTEgMGgxbS0yOSAxaDJtMSAwaDFtMSAwaDVtMSAwaDVtMSAwaDFtMSAwaDFtMSAwaDFtMyAwaDRtLTI5IDFoMm0xIDBoM20yIDBoM20xIDBoMm0yIDBoMW0yIDBoMm0xIDBoM20zIDBoMW0tMjkgMWgybTEgMGgxbTEgMGg0bTIgMGg0bTEgMGg0bTQgMGgybTIgMGgxbS0yOSAxaDFtMiAwaDNtMyAwaDFtMSAwaDFtMiAwaDNtMiAwaDRtMSAwaDJtMiAwaDFtLTI5IDFoMW0xIDBoMW0yIDBoMm0yIDBoMm0zIDBoMW0xIDBoMm0yIDBoNW0xIDBoMW0xIDBoMW0tMjEgMWgxbTEgMGgzbTIgMGgxbTEgMGgxbTIgMGgxbTMgMGgzbS0yNyAxaDdtMSAwaDJtMyAwaDNtMiAwaDNtMSAwaDFtMSAwaDFtLTI1IDFoMW01IDBoMW02IDBoNG0yIDBoMm0zIDBoMm0tMjYgMWgxbTEgMGgzbTEgMGgxbTUgMGgxbTMgMGg5bTIgMGgybS0yOSAxaDFtMSAwaDNtMSAwaDFtMiAwaDJtMSAwaDFtNSAwaDNtMiAwaDFtMSAwaDNtLTI4IDFoMW0xIDBoM20xIDBoMW0yIDBoMW0zIDBoMW0xIDBoMW0zIDBoN20xIDBoMW0tMjggMWgxbTUgMGgxbTEgMGgybTEgMGgzbTIgMGgxbTEgMGgxbTIgMGgxbTIgMGgzbTEgMGgxbS0yOSAxaDdtMiAwaDFtMSAwaDVtMSAwaDNtMSAwaDJtMSAwaDFtMSAwaDEiLz48L3N2Zz4K" alt="Kod QR MyUBAT">
-      <div class="qrcap">Imbas untuk MyUBAT</div>
-    </div>
-    <div>
-      <div class="big">03-8947 5555<br>samb. 1113</div>
-      <div class="sm">Jabatan Farmasi, Hospital Sultan Idris Shah, Serdang<br>
-      Atau guna menu &ldquo;Meja Bantuan&rdquo; dalam aplikasi MyUBAT.</div>
-    </div>
+    <div class="big">03-8947 5555 &nbsp;samb. 1113</div>
+    <div class="sm">Jabatan Farmasi, Hospital Sultan Idris Shah, Serdang<br>
+    Atau guna menu &ldquo;Meja Bantuan&rdquo; dalam aplikasi MyUBAT.</div>
   </div>
 
   <div class="fineprint">Muka 2 daripada 2</div>
