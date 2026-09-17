@@ -88,13 +88,15 @@ def tree(nodes, marker, gap=GAP):
 
 SERVIS = tree([
     {'q': ['Mahu ubat dihantar', 'ke rumah?'],
-     'leaf': ('UBAT MELALUI POS', ['Caj kurier minimum.'], '(UMP)')},
+     'leaf': ('UBAT MELALUI POS', ['Hantar ke alamat pilihan anda',
+                                   'dengan caj kurier minimum.'], '(UMP)')},
     {'q': ['Anda datang', 'dengan kereta?'],
-     'leaf': ('FARMASI PANDU LALU', ['Tanpa turun dari kereta.'], '(FPL)')},
+     'leaf': ('FARMASI PANDU LALU', ['Ambil ubat tanpa turun',
+                                     'dari kereta.'], '(FPL)')},
     {'q': ['Mahu ambil pada', 'bila-bila masa?'],
-     'leaf': ('LOCKER4U', ['Buka 24 jam \u2014 ikut masa anda.',
-                           'Ambil dalam 3 hari.'])},
-    {'end': ('TANYA STAF KAMI', ['Kami bantu anda pilih.'])},
+     'leaf': ('LOCKER4U', ['Ambil ubat ikut masa anda.'])},
+    {'end': ('TANYA STAF KAMI',
+             ['Kami cadangkan pilihan yang paling sesuai untuk anda.'])},
 ], 'ae')
 
 DAFTAR = tree([
@@ -102,5 +104,5 @@ DAFTAR = tree([
      'leaf': ('DAFTAR SENDIRI', ['Imbas QR di muka hadapan.'])},
     {'q': ['Ada waris menolong?'],
      'leaf': ('WARIS DAFTARKAN', ['Anak boleh mohon untuk anda.'])},
-    {'end': ('STAF DAFTARKAN DI KAUNTER', ['Beritahu staf. Lebih kurang 5 minit.'])},
+    {'end': ('STAF DAFTARKAN DI KAUNTER', ['Beritahu staf. Lebih kurang 5 minit sahaja.'])},
 ], 'ae2', gap=40)
