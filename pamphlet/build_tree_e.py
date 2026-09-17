@@ -88,26 +88,43 @@ def tree(nodes, marker, gap=GAP):
 SERVIS = tree([
     {'q': ['Mahu ubat dihantar', 'terus ke rumah?'],
      'leaf': ('UBAT MELALUI POS',
-              ['Dihantar ke alamat pilihan.',
-               'Mohon sekurang-kurangnya',
-               '3 minggu awal.'], '(UMP)')},
-    {'q': ['Anda datang ke', 'hospital dengan kereta?'],
+              ['Hantar ke alamat pilihan anda',
+               'dengan caj kurier minimum.'], '(UMP)')},
+    {'q': ['Anda datang', 'dengan kereta?'],
      'leaf': ('FARMASI PANDU LALU',
-              ['Ambil dari dalam kereta.',
-               'Isnin – Khamis:  12.00 tgh – 7.00 ptg',
-               'Jumaat:  2.45 ptg – 7.00 ptg',
-               'Sabtu:  9.00 pagi – 1.00 tgh'], '(FPL)')},
-    {'q': ['Mahu ambil bila-bila', 'masa — termasuk malam', 'dan hujung minggu?'],
-     'leaf': ('LOCKER4U', ['Buka 24 jam. Ambil dalam 3 hari.'])},
+              ['Ambil ubat tanpa turun',
+               'dari kereta.'], '(FPL)')},
+    # the night-and-weekend clause is the concrete benefit of the locker; it is
+    # what makes a patient say yes, so it stays in the question itself
+    {'q': ['Mahu ambil waktu', 'malam dan hujung', 'minggu juga?'],
+     'leaf': ('LOKAR UBAT',
+              ['Buka 24 jam \u2014 ambil ubat',
+               'ikut masa anda.'], '(LOCKER4U)')},
     {'end': ('TANYA STAF KAMI',
              ['Kami cadangkan pilihan yang paling sesuai untuk anda.'])},
 ], 'ae')
 
 DAFTAR = tree([
-    {'q': ['Anda ada telefon', 'pintar?'],
-     'leaf': ('DAFTAR SENDIRI', ['Imbas kod QR di muka hadapan.'])},
-    {'q': ['Ada waris yang', 'boleh tolong?'],
-     'leaf': ('WARIS DAFTARKAN', ['Anak boleh mohon bagi pihak anda.'])},
+    {'q': ['Ada telefon pintar?'],
+     'leaf': ('DAFTAR SENDIRI', ['Imbas QR di muka hadapan.'])},
+    # "waris" reads as inheritance law to many patients; name the people instead
+    {'q': ['Ada anak atau', 'keluarga menolong?'],
+     'leaf': ('KELUARGA DAFTARKAN', ['Anak atau pasangan boleh',
+                                     'mohon untuk anda.'])},
     {'end': ('STAF DAFTARKAN DI KAUNTER',
-             ['Beritahu staf hari ini — lebih kurang 5 minit sahaja.'])},
+             ['Beritahu staf. Lebih kurang 5 minit sahaja.'])},
 ], 'ae2', gap=32)
+
+
+if __name__ == '__main__':
+    # regenerate the two trees in place, so the HTML never drifts from this file
+    import os, re
+    html = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        'risalah_vas_e_pokok.html')
+    src = open(html, encoding='utf-8').read()
+    blocks = re.findall(r'  <svg class="tree".*?</svg>', src, re.S)
+    assert len(blocks) == 2, f'expected 2 trees, found {len(blocks)}'
+    for old, new in zip(blocks, ('  ' + SERVIS, '  ' + DAFTAR)):
+        src = src.replace(old, new, 1)
+    open(html, 'w', encoding='utf-8').write(src)
+    print('trees regenerated in', os.path.basename(html))
