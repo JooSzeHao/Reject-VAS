@@ -94,7 +94,8 @@ SERVIS = tree([
      'leaf': ('FARMASI PANDU LALU', ['Ambil ubat tanpa turun',
                                      'dari kereta.'], '(FPL)')},
     {'q': ['Mahu ambil pada', 'bila-bila masa?'],
-     'leaf': ('LOCKER4U', ['Ambil ubat ikut masa anda.'])},
+     'leaf': ('LOKAR UBAT', ['Buka 24 jam \u2014 ambil ubat',
+                             'ikut masa anda.'], '(LOCKER4U)')},
     {'end': ('TANYA STAF KAMI',
              ['Kami cadangkan pilihan yang paling sesuai untuk anda.'])},
 ], 'ae')
