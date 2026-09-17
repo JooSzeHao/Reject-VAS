@@ -37,8 +37,10 @@
   .tree { width: 100%; display: block; margin-top: 4mm; }
 
   /* ---------- callout ---------- */
-  .callout { margin-top: 5mm; border-left: 4mm solid #000; padding: 0 0 0 4mm; font-size: 10.4pt; }
-  .callout b { display: block; font-size: 11pt; margin-bottom: .8mm; }
+  .hours { margin-top: 4mm; border-top: 1pt solid #000; border-bottom: 1pt solid #000;
+           padding: 2.2mm 0; font-size: 10.2pt; }
+  .callout { margin-top: 5mm; border-left: 4mm solid #000; padding: 0 0 0 4mm; font-size: 11pt; }
+  .callout b { display: block; font-size: 11.6pt; margin-bottom: 1mm; }
 
   /* ---------- decision ---------- */
   .decide { border: 3pt solid #000; padding: 4mm 4.5mm; margin-top: 5mm; }
@@ -46,20 +48,20 @@
   .tick { display: flex; align-items: flex-start; margin-bottom: 2.6mm; }
   .tick:last-child { margin-bottom: 0; }
   .box { flex: 0 0 auto; width: 7.4mm; height: 7.4mm; border: 2pt solid #000; margin-right: 4mm; }
-  .tick .ttl { display: block; font-size: 11.6pt; font-weight: bold; }
-  .tick .sub { font-size: 9.8pt; color: #222; }
+  .tick .ttl { display: block; font-size: 12.2pt; font-weight: bold; }
+  .tick .sub { font-size: 10.4pt; color: #222; }
   .split { border-top: 1pt solid #000; margin: 2.6mm 0 2.6mm 11.4mm; }
 
   /* ---------- pengesahan ---------- */
   .form { border: 3pt solid #000; padding: 3.6mm 4.5mm; margin-top: 4mm; }
   .form h3 { margin: 0 0 1.4mm 0; font-size: 12.4pt; letter-spacing: -.2pt; }
-  .form .only { font-size: 10pt; font-weight: bold; margin: 0 0 4mm 0; }
+  .form .only { font-size: 10.6pt; font-weight: bold; margin: 0 0 4mm 0; }
   .form .policy { font-size: 8.6pt; color: #222; margin: 0 0 3mm 0; }
   .frow { display: flex; gap: 6mm; margin-bottom: 3.2mm; }
   .fld { flex: 1 1 auto; }
-  .fld .lab { font-size: 8.6pt; letter-spacing: .04em; text-transform: uppercase; margin-bottom: .8mm; }
+  .fld .lab { font-size: 9pt; letter-spacing: .04em; text-transform: uppercase; margin-bottom: .8mm; }
   .fld .line { border-bottom: 1.25pt solid #000; height: 6mm; }
-  .decl { font-size: 10.6pt; border-top: 1.5pt solid #000; border-bottom: 1.5pt solid #000;
+  .decl { font-size: 11pt; border-top: 1.5pt solid #000; border-bottom: 1.5pt solid #000;
           padding: 2.4mm 0; margin: 0 0 3.6mm 0; }
   .sig { display: flex; gap: 9mm; }
   .sig .col { flex: 1 1 50%; }
@@ -76,10 +78,10 @@
   .tree .strip { fill: #000; }
   .tree .disc { fill: #000; }
   .tree .dnum { font-size: 18px; font-weight: bold; fill: #fff; }
-  .tree .qt { font-size: 21px; font-weight: bold; }
-  .tree .lt { font-size: 19px; font-weight: bold; fill: #fff; }
-  .tree .lsfx { font-size: 14px; font-weight: bold; fill: #fff; }
-  .tree .ln { font-size: 15.5px; }
+  .tree .qt { font-size: 23px; font-weight: bold; }
+  .tree .lt { font-size: 20px; font-weight: bold; fill: #fff; }
+  .tree .lsfx { font-size: 15px; font-weight: bold; fill: #fff; }
+  .tree .ln { font-size: 17px; }
   .tree .edge { stroke: #000; stroke-width: 2.5; fill: none; }
   .tree .elabel { font-size: 16px; font-weight: bold; }
 </style>
@@ -92,7 +94,7 @@
       <p class="kicker">Jabatan Farmasi &middot; Hospital Sultan Idris Shah, Serdang</p>
       <h1>Ambil ubat susulan<br>tanpa beratur.</h1>
       <p class="sub">Perkhidmatan Nilai Tambah Farmasi (VAS)</p>
-      <p class="tel">Bertanya? <b>03-8947 5555 &nbsp;samb. 1113</b></p>
+      <p class="tel">Tel <b>03-8947 5555</b> &nbsp;samb. 1113</p>
     </div>
     <div class="brand">
       <div class="mark"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJNeVVCQVQiPgogIDxkZWZzPgogICAgPHBhdGggaWQ9Im1tLWhlYXJ0IiBkPSJNNTAsODggQzIyLDY0IDgsNTAgOCwzMyBDOCwxOSAxOCw5IDMxLDkgQzM5LDkgNDYsMTMgNTAsMjAgQzU0LDEzIDYxLDkgNjksOSBDODIsOSA5MiwxOSA5MiwzMyBDOTIsNTAgNzgsNjQgNTAsODggWiIvPgogICAgPHJlY3QgaWQ9Im1tLXBpbGwiIHg9Ii0xOCIgeT0iLTEwIiB3aWR0aD0iMzYiIGhlaWdodD0iMjAiIHJ4PSIxMCIgcnk9IjEwIi8+CiAgICA8Y2xpcFBhdGggaWQ9Im1tLWNsaXAiPjx1c2UgaHJlZj0iI21tLXBpbGwiLz48L2NsaXBQYXRoPgogIDwvZGVmcz4KCiAgPHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMjMiIHJ5PSIyMyIgZmlsbD0iIzAwMDAwMCIvPgoKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NS41IDQ0KSByb3RhdGUoLTM3KSBzY2FsZSgwLjcwKSB0cmFuc2xhdGUoLTUwIC01MCkiPgogICAgPHVzZSBocmVmPSIjbW0taGVhcnQiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPC9nPgoKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MS41IDYzLjUpIHJvdGF0ZSg0OCkiPgogICAgPHVzZSBocmVmPSIjbW0tcGlsbCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjExIi8+CiAgICA8ZyBjbGlwLXBhdGg9InVybCgjbW0tY2xpcCkiPgogICAgICA8cmVjdCB4PSItMTgiIHk9Ii0xMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjIwIiBmaWxsPSIjRkZGRkZGIi8+CiAgICAgIDxyZWN0IHg9IjAiIHk9Ii0xMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMDAwMDAwIi8+CiAgICAgIDxsaW5lIHgxPSIwIiB5MT0iLTEwIiB4Mj0iMCIgeTI9IjEwIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNC42Ii8+CiAgICA8L2c+CiAgICA8dXNlIGhyZWY9IiNtbS1waWxsIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNC42Ii8+CiAgPC9nPgo8L3N2Zz4K" alt="MyUBAT"><b>MyUBAT</b></div>
@@ -104,64 +106,59 @@
 
   <div class="sec"><span class="n">A</span><h2>Perkhidmatan mana untuk saya?</h2></div>
   <div class="hair"></div>
-  <svg class="tree" viewBox="0 0 700 597" role="img" aria-label="Pokok keputusan">
+  <svg class="tree" viewBox="0 0 700 521" role="img" aria-label="Pokok keputusan">
     <defs><marker id="ae" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker></defs>
     <rect class="qbox" x="4" y="0" width="322" height="98"/>
     <circle class="disc" cx="32" cy="36" r="15"/>
     <text class="dnum" x="32" y="43" text-anchor="middle">1</text>
     <text class="qt" x="56" y="43">Mahu ubat dihantar</text>
-    <text class="qt" x="56" y="68">terus ke rumah?</text>
+    <text class="qt" x="56" y="68">ke rumah?</text>
     <line class="edge" x1="326" y1="49" x2="380" y2="49" marker-end="url(#ae)"/>
     <text class="elabel" x="353" y="38" text-anchor="middle">YA</text>
     <rect class="lbox" x="386" y="0" width="310" height="98"/>
     <rect class="strip" x="386" y="0" width="310" height="34"/>
     <text class="lt" x="402" y="24">UBAT MELALUI POS<tspan class="lsfx"> (UMP)</tspan></text>
-    <text class="ln" x="402" y="56">Dihantar ke alamat pilihan.</text>
-    <text class="ln" x="402" y="75">Caj kurier minimum dikenakan.</text>
+    <text class="ln" x="402" y="71">Caj kurier minimum.</text>
     <line class="edge" x1="165" y1="98" x2="165" y2="144" marker-end="url(#ae)"/>
     <text class="elabel" x="180" y="128">TIDAK</text>
-    <rect class="qbox" x="4" y="148" width="322" height="149"/>
-    <circle class="disc" cx="32" cy="209" r="15"/>
-    <text class="dnum" x="32" y="216" text-anchor="middle">2</text>
-    <text class="qt" x="56" y="216">Anda datang ke</text>
-    <text class="qt" x="56" y="241">hospital dengan kereta?</text>
-    <line class="edge" x1="326" y1="222" x2="380" y2="222" marker-end="url(#ae)"/>
-    <text class="elabel" x="353" y="211" text-anchor="middle">YA</text>
-    <rect class="lbox" x="386" y="148" width="310" height="149"/>
+    <rect class="qbox" x="4" y="148" width="322" height="98"/>
+    <circle class="disc" cx="32" cy="184" r="15"/>
+    <text class="dnum" x="32" y="191" text-anchor="middle">2</text>
+    <text class="qt" x="56" y="191">Anda datang</text>
+    <text class="qt" x="56" y="216">dengan kereta?</text>
+    <line class="edge" x1="326" y1="197" x2="380" y2="197" marker-end="url(#ae)"/>
+    <text class="elabel" x="353" y="186" text-anchor="middle">YA</text>
+    <rect class="lbox" x="386" y="148" width="310" height="98"/>
     <rect class="strip" x="386" y="148" width="310" height="34"/>
     <text class="lt" x="402" y="172">FARMASI PANDU LALU<tspan class="lsfx"> (FPL)</tspan></text>
-    <text class="ln" x="402" y="204">Ambil ubat terus di booth FPL —</text>
-    <text class="ln" x="402" y="223">tidak perlu turun dari kereta.</text>
-    <text class="ln" x="402" y="242">Isnin – Khamis:  12.00 tgh – 7.00 ptg</text>
-    <text class="ln" x="402" y="261">Jumaat:  2.45 ptg – 7.00 ptg</text>
-    <text class="ln" x="402" y="280">Sabtu:  9.00 pagi – 1.00 tgh</text>
-    <line class="edge" x1="165" y1="297" x2="165" y2="343" marker-end="url(#ae)"/>
-    <text class="elabel" x="180" y="327">TIDAK</text>
-    <rect class="qbox" x="4" y="347" width="322" height="123"/>
-    <circle class="disc" cx="32" cy="383" r="15"/>
-    <text class="dnum" x="32" y="390" text-anchor="middle">3</text>
-    <text class="qt" x="56" y="390">Mahu ambil bila-bila</text>
-    <text class="qt" x="56" y="415">masa — termasuk malam</text>
-    <text class="qt" x="56" y="440">dan hujung minggu?</text>
-    <line class="edge" x1="326" y1="408" x2="380" y2="408" marker-end="url(#ae)"/>
-    <text class="elabel" x="353" y="397" text-anchor="middle">YA</text>
-    <rect class="lbox" x="386" y="347" width="310" height="123"/>
-    <rect class="strip" x="386" y="347" width="310" height="34"/>
-    <text class="lt" x="402" y="371">LOCKER4U</text>
-    <text class="ln" x="402" y="403">Waktu fleksibel — buka 24 jam.</text>
-    <text class="ln" x="402" y="422">Ambil ubat pada masa yang selesa</text>
-    <text class="ln" x="402" y="441">untuk anda, dalam tempoh 3 hari.</text>
-    <line class="edge" x1="165" y1="470" x2="165" y2="516" marker-end="url(#ae)"/>
-    <text class="elabel" x="180" y="500">TIDAK</text>
-    <rect class="lbox" x="4" y="520" width="692" height="73"/>
-    <rect class="strip" x="4" y="520" width="692" height="34"/>
-    <text class="lt" x="20" y="544">TANYA STAF KAMI</text>
-    <text class="ln" x="20" y="576">Kami cadangkan pilihan yang paling sesuai untuk anda.</text>
+    <text class="ln" x="402" y="219">Tanpa turun dari kereta.</text>
+    <line class="edge" x1="165" y1="246" x2="165" y2="292" marker-end="url(#ae)"/>
+    <text class="elabel" x="180" y="276">TIDAK</text>
+    <rect class="qbox" x="4" y="296" width="322" height="98"/>
+    <circle class="disc" cx="32" cy="332" r="15"/>
+    <text class="dnum" x="32" y="339" text-anchor="middle">3</text>
+    <text class="qt" x="56" y="339">Mahu ambil pada</text>
+    <text class="qt" x="56" y="364">bila-bila masa?</text>
+    <line class="edge" x1="326" y1="345" x2="380" y2="345" marker-end="url(#ae)"/>
+    <text class="elabel" x="353" y="334" text-anchor="middle">YA</text>
+    <rect class="lbox" x="386" y="296" width="310" height="98"/>
+    <rect class="strip" x="386" y="296" width="310" height="34"/>
+    <text class="lt" x="402" y="320">LOCKER4U</text>
+    <text class="ln" x="402" y="358">Buka 24 jam — ikut masa anda.</text>
+    <text class="ln" x="402" y="377">Ambil dalam 3 hari.</text>
+    <line class="edge" x1="165" y1="394" x2="165" y2="440" marker-end="url(#ae)"/>
+    <text class="elabel" x="180" y="424">TIDAK</text>
+    <rect class="lbox" x="4" y="444" width="692" height="73"/>
+    <rect class="strip" x="4" y="444" width="692" height="34"/>
+    <text class="lt" x="20" y="468">TANYA STAF KAMI</text>
+    <text class="ln" x="20" y="500">Kami bantu anda pilih.</text>
   </svg>
+
+  <div class="hours"><b>Waktu Pandu Lalu</b> &nbsp;Isnin&ndash;Khamis 12.00 tgh &ndash; 7.00 ptg &nbsp;&middot;&nbsp; Jumaat 2.45 &ndash; 7.00 ptg &nbsp;&middot;&nbsp; Sabtu 9.00 pagi &ndash; 1.00 tgh</div>
 
   <div class="callout">
     <b>Temujanji hampir setiap bulan?</b>
-    Beritahu kami. Kami semak sama ada bekalan ubat anda boleh dibekalkan bersama, supaya kunjungan anda betul-betul berkurang.
+    Beritahu kami &mdash; ubat beberapa klinik mungkin boleh dibekalkan bersama.
   </div>
 
   <div class="foot">Muka 1 daripada 2 &middot; sila terbalikkan</div>
@@ -170,56 +167,54 @@
 <div class="page">
   <div class="sec" style="margin-top:0"><span class="n">B</span><h2>Bagaimana saya mendaftar?</h2></div>
   <div class="hair"></div>
-  <svg class="tree" viewBox="0 0 700 337" role="img" aria-label="Pokok keputusan">
+  <svg class="tree" viewBox="0 0 700 303" role="img" aria-label="Pokok keputusan">
     <defs><marker id="ae2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker></defs>
-    <rect class="qbox" x="4" y="0" width="322" height="98"/>
+    <rect class="qbox" x="4" y="0" width="322" height="73"/>
     <circle class="disc" cx="32" cy="36" r="15"/>
     <text class="dnum" x="32" y="43" text-anchor="middle">1</text>
-    <text class="qt" x="56" y="43">Anda ada telefon</text>
-    <text class="qt" x="56" y="68">pintar?</text>
-    <line class="edge" x1="326" y1="49" x2="380" y2="49" marker-end="url(#ae2)"/>
-    <text class="elabel" x="353" y="38" text-anchor="middle">YA</text>
-    <rect class="lbox" x="386" y="0" width="310" height="98"/>
+    <text class="qt" x="56" y="43">Ada telefon pintar?</text>
+    <line class="edge" x1="326" y1="36" x2="380" y2="36" marker-end="url(#ae2)"/>
+    <text class="elabel" x="353" y="25" text-anchor="middle">YA</text>
+    <rect class="lbox" x="386" y="0" width="310" height="73"/>
     <rect class="strip" x="386" y="0" width="310" height="34"/>
     <text class="lt" x="402" y="24">DAFTAR SENDIRI</text>
-    <text class="ln" x="402" y="56">Imbas kod QR di muka hadapan.</text>
-    <line class="edge" x1="165" y1="98" x2="165" y2="126" marker-end="url(#ae2)"/>
-    <text class="elabel" x="180" y="119">TIDAK</text>
-    <rect class="qbox" x="4" y="130" width="322" height="98"/>
-    <circle class="disc" cx="32" cy="166" r="15"/>
-    <text class="dnum" x="32" y="173" text-anchor="middle">2</text>
-    <text class="qt" x="56" y="173">Ada waris yang</text>
-    <text class="qt" x="56" y="198">boleh tolong?</text>
-    <line class="edge" x1="326" y1="179" x2="380" y2="179" marker-end="url(#ae2)"/>
-    <text class="elabel" x="353" y="168" text-anchor="middle">YA</text>
-    <rect class="lbox" x="386" y="130" width="310" height="98"/>
-    <rect class="strip" x="386" y="130" width="310" height="34"/>
-    <text class="lt" x="402" y="154">WARIS DAFTARKAN</text>
-    <text class="ln" x="402" y="186">Anak boleh mohon bagi pihak anda.</text>
-    <line class="edge" x1="165" y1="228" x2="165" y2="256" marker-end="url(#ae2)"/>
-    <text class="elabel" x="180" y="249">TIDAK</text>
-    <rect class="lbox" x="4" y="260" width="692" height="73"/>
-    <rect class="strip" x="4" y="260" width="692" height="34"/>
-    <text class="lt" x="20" y="284">STAF DAFTARKAN DI KAUNTER</text>
-    <text class="ln" x="20" y="316">Beritahu staf hari ini — lebih kurang 5 minit sahaja.</text>
+    <text class="ln" x="402" y="59">Imbas QR di muka hadapan.</text>
+    <line class="edge" x1="165" y1="73" x2="165" y2="109" marker-end="url(#ae2)"/>
+    <text class="elabel" x="180" y="98">TIDAK</text>
+    <rect class="qbox" x="4" y="113" width="322" height="73"/>
+    <circle class="disc" cx="32" cy="149" r="15"/>
+    <text class="dnum" x="32" y="156" text-anchor="middle">2</text>
+    <text class="qt" x="56" y="156">Ada waris menolong?</text>
+    <line class="edge" x1="326" y1="149" x2="380" y2="149" marker-end="url(#ae2)"/>
+    <text class="elabel" x="353" y="138" text-anchor="middle">YA</text>
+    <rect class="lbox" x="386" y="113" width="310" height="73"/>
+    <rect class="strip" x="386" y="113" width="310" height="34"/>
+    <text class="lt" x="402" y="137">WARIS DAFTARKAN</text>
+    <text class="ln" x="402" y="172">Anak boleh mohon untuk anda.</text>
+    <line class="edge" x1="165" y1="186" x2="165" y2="222" marker-end="url(#ae2)"/>
+    <text class="elabel" x="180" y="211">TIDAK</text>
+    <rect class="lbox" x="4" y="226" width="692" height="73"/>
+    <rect class="strip" x="4" y="226" width="692" height="34"/>
+    <text class="lt" x="20" y="250">STAF DAFTARKAN DI KAUNTER</text>
+    <text class="ln" x="20" y="282">Beritahu staf. Lebih kurang 5 minit.</text>
   </svg>
 
   <div class="decide">
-    <h3>C &nbsp;&middot;&nbsp; Keputusan anda hari ini &mdash; tandakan satu</h3>
+    <h3>C &nbsp;&middot;&nbsp; Keputusan anda &mdash; tandakan satu</h3>
       <div class="tick"><div class="box"></div>
-        <div><span class="ttl">YA — tolong daftarkan saya.</span><span class="sub">Staf akan bantu daftar di kaunter sekarang. Lebih kurang 5 minit.</span></div></div>
+        <div><span class="ttl">YA — tolong daftarkan saya.</span><span class="sub">Staf daftarkan sekarang. Lebih kurang 5 minit.</span></div></div>
       <div class="tick"><div class="box"></div>
-        <div><span class="ttl">YA — saya daftar sendiri.</span><span class="sub">Imbas kod QR di muka hadapan dan daftar MyUBAT.</span></div></div>
+        <div><span class="ttl">YA — saya daftar sendiri.</span><span class="sub">Imbas QR di muka hadapan.</span></div></div>
       <div class="split"></div>
       <div class="tick"><div class="box"></div>
-        <div><span class="ttl">SAYA BERMINAT — nak baca dahulu.</span><span class="sub">Minta <i>Panduan Lengkap MyUBAT</i> daripada staf.</span></div></div>
+        <div><span class="ttl">SAYA BERMINAT — nak baca dahulu.</span><span class="sub">Minta <i>Panduan Lengkap MyUBAT</i>.</span></div></div>
       <div class="tick"><div class="box"></div>
-        <div><span class="ttl">BELUM — saya kekal ambil di kaunter.</span><span class="sub">Sila lengkapkan <b>Bahagian Pengesahan</b> di bawah.</span></div></div>
+        <div><span class="ttl">BELUM — saya kekal ambil di kaunter.</span><span class="sub">Lengkapkan bahagian di bawah.</span></div></div>
   </div>
 
   <div class="form">
     <h3>Bahagian Pengesahan</h3>
-    <p class="only">Lengkapkan bahagian ini HANYA jika anda menanda &ldquo;BELUM&rdquo;.</p>
+    <p class="only">Isi HANYA jika anda menanda &ldquo;BELUM&rdquo;.</p>
 
     <div class="frow">
       <div class="fld" style="flex:2"><div class="lab">Nama Pesakit</div><div class="line"></div></div>

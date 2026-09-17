@@ -60,8 +60,9 @@ def tree(nodes, marker, gap=GAP):
             out.append(f'<rect class="strip" x="{R_X}" y="{y}" width="{R_W}" height="{STRIP}"/>')
             sfx = f'<tspan class="lsfx"> {esc(suffix)}</tspan>' if suffix else ''
             out.append(f'<text class="lt" x="{R_X+16}" y="{y+24}">{esc(title)}{sfx}</text>')
+            lstart = y + STRIP + (h - STRIP - 19 * len(lines)) // 2 + 15
             for j, line in enumerate(lines):
-                out.append(f'<text class="ln" x="{R_X+16}" y="{y+STRIP+22+j*19}">{esc(line)}</text>')
+                out.append(f'<text class="ln" x="{R_X+16}" y="{lstart+j*19}">{esc(line)}</text>')
         else:
             title, lines = a
             w = R_X + R_W - L_X
@@ -86,30 +87,20 @@ def tree(nodes, marker, gap=GAP):
 
 
 SERVIS = tree([
-    {'q': ['Mahu ubat dihantar', 'terus ke rumah?'],
-     'leaf': ('UBAT MELALUI POS',
-              ['Dihantar ke alamat pilihan.',
-               'Caj kurier minimum dikenakan.'], '(UMP)')},
-    {'q': ['Anda datang ke', 'hospital dengan kereta?'],
-     'leaf': ('FARMASI PANDU LALU',
-              ['Ambil ubat terus di booth FPL —',
-               'tidak perlu turun dari kereta.',
-               'Isnin – Khamis:  12.00 tgh – 7.00 ptg',
-               'Jumaat:  2.45 ptg – 7.00 ptg',
-               'Sabtu:  9.00 pagi – 1.00 tgh'], '(FPL)')},
-    {'q': ['Mahu ambil bila-bila', 'masa — termasuk malam', 'dan hujung minggu?'],
-     'leaf': ('LOCKER4U', ['Waktu fleksibel — buka 24 jam.',
-                          'Ambil ubat pada masa yang selesa',
-                          'untuk anda, dalam tempoh 3 hari.'])},
-    {'end': ('TANYA STAF KAMI',
-             ['Kami cadangkan pilihan yang paling sesuai untuk anda.'])},
+    {'q': ['Mahu ubat dihantar', 'ke rumah?'],
+     'leaf': ('UBAT MELALUI POS', ['Caj kurier minimum.'], '(UMP)')},
+    {'q': ['Anda datang', 'dengan kereta?'],
+     'leaf': ('FARMASI PANDU LALU', ['Tanpa turun dari kereta.'], '(FPL)')},
+    {'q': ['Mahu ambil pada', 'bila-bila masa?'],
+     'leaf': ('LOCKER4U', ['Buka 24 jam \u2014 ikut masa anda.',
+                           'Ambil dalam 3 hari.'])},
+    {'end': ('TANYA STAF KAMI', ['Kami bantu anda pilih.'])},
 ], 'ae')
 
 DAFTAR = tree([
-    {'q': ['Anda ada telefon', 'pintar?'],
-     'leaf': ('DAFTAR SENDIRI', ['Imbas kod QR di muka hadapan.'])},
-    {'q': ['Ada waris yang', 'boleh tolong?'],
-     'leaf': ('WARIS DAFTARKAN', ['Anak boleh mohon bagi pihak anda.'])},
-    {'end': ('STAF DAFTARKAN DI KAUNTER',
-             ['Beritahu staf hari ini — lebih kurang 5 minit sahaja.'])},
-], 'ae2', gap=32)
+    {'q': ['Ada telefon pintar?'],
+     'leaf': ('DAFTAR SENDIRI', ['Imbas QR di muka hadapan.'])},
+    {'q': ['Ada waris menolong?'],
+     'leaf': ('WARIS DAFTARKAN', ['Anak boleh mohon untuk anda.'])},
+    {'end': ('STAF DAFTARKAN DI KAUNTER', ['Beritahu staf. Lebih kurang 5 minit.'])},
+], 'ae2', gap=40)
