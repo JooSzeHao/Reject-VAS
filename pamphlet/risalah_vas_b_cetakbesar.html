@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<title>Risalah VAS — Versi Cetak Besar</title>
+<style>
+  @page { size: A4; margin: 10mm 12mm 8mm 12mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Arial", "Helvetica", sans-serif;
+    color: #000; font-size: 12pt; line-height: 1.4;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  /* ---- black masthead band ---- */
+  .band { background: #000; color: #fff; padding: 4.5mm 6mm; display: flex; gap: 7mm; align-items: center; }
+  .band .words { flex: 1 1 auto; }
+  .band .eyebrow { font-size: 9.5pt; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 2.5mm 0; }
+  .band h1 { font-size: 26pt; line-height: 1.04; margin: 0 0 2.2mm 0; }
+  .band .sub { margin: 0; font-size: 11.5pt; }
+  .brand { flex: 0 0 auto; width: 28mm; background: #fff; color: #000; padding: 2.5mm 2mm 2mm 2mm; text-align: center; }
+  .brand .mark { font-size: 13.5pt; font-weight: bold; margin-bottom: 1.8mm; }
+  .brand .mark span { font-weight: normal; }
+  .brand img { width: 22mm; height: 22mm; display: block; margin: 0 auto; }
+  .brand .cap { font-size: 8.5pt; margin-top: 1.2mm; line-height: 1.2; }
+
+  /* ---- section bar ---- */
+  .bar { background: #000; color: #fff; font-size: 13pt; font-weight: bold;
+         text-transform: uppercase; letter-spacing: .06em; padding: 2.4mm 4mm; margin: 4.5mm 0 3.4mm 0; }
+  .bar.tight { margin-top: 0; }
+
+  /* ---- stacked chooser cards ---- */
+  .card { border-left: 3.5mm solid #000; padding: 0 0 0 4mm; margin-bottom: 2.4mm; }
+  .card .you { font-size: 12.5pt; font-weight: bold; margin-bottom: .8mm; }
+  .card .arrow { font-size: 13.5pt; font-weight: bold; }
+  .card .note { font-size: 10.5pt; color: #222; }
+
+  .note-box { border: 2pt solid #000; padding: 3mm 3.6mm; font-size: 11pt; margin-top: 3.4mm; }
+
+  /* ---- faq ---- */
+  .faq p { margin: 0 0 2.6mm 0; font-size: 11pt; }
+  .faq b { display: block; font-size: 11.4pt; }
+
+  /* ---- decision ---- */
+  .decide { border: 3pt solid #000; padding: 4mm 5mm; margin-top: 4.5mm; }
+  .decide h3 { margin: 0 0 3.4mm 0; font-size: 13pt; text-transform: uppercase; letter-spacing: .05em; }
+  .opt { display: flex; align-items: flex-start; margin-bottom: 2.8mm; }
+  .opt:last-child { margin-bottom: 0; }
+  .box { flex: 0 0 auto; width: 8mm; height: 8mm; border: 2pt solid #000; margin-right: 4mm; }
+  .opt b { display: block; font-size: 11.8pt; }
+  .opt .sub { font-size: 10.5pt; color: #222; }
+  .split { border-top: 1pt solid #000; margin: 3.4mm 0 3.4mm 13.5mm; }
+
+  /* ---- hours ---- */
+  .hours { border-collapse: collapse; width: 100%; }
+  .hours td, .hours th { border: 1pt solid #000; padding: 2mm 2.6mm; font-size: 10.3pt; }
+  .hours th { background: #000; color: #fff; text-align: left; font-size: 10pt; text-transform: uppercase; letter-spacing: .05em; }
+  .hours td:first-child { font-weight: bold; }
+
+  .contact { border-top: 4pt solid #000; margin-top: 5mm; padding-top: 3.5mm; }
+  .contact .big { font-size: 17.5pt; font-weight: bold; }
+  .contact .sm { font-size: 11pt; margin-top: 2mm; }
+  .fineprint { margin-top: 4mm; font-size: 9pt; color: #444; text-align: center; }
+</style>
+</head>
+<body>
+
+<!-- ============ MUKA 1 ============ -->
+<div class="page">
+
+  <div class="band">
+    <div class="words">
+      <p class="eyebrow">Jabatan Farmasi &middot; Hospital Sultan Idris Shah, Serdang</p>
+      <h1>Ambil ubat susulan<br>tanpa beratur.</h1>
+      <p class="sub">Perkhidmatan Nilai Tambah Farmasi (VAS)</p>
+    </div>
+    <div class="brand">
+      <div class="mark">My<span>UBAT</span></div>
+      <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMzAiIGhlaWdodD0iMzMwIiBjbGFzcz0ic2Vnbm8iPjxwYXRoIHRyYW5zZm9ybT0ic2NhbGUoMTApIiBjbGFzcz0icXJsaW5lIiBzdHJva2U9IiMwMDAiIGQ9Ik0yIDIuNWg3bTEgMGgxbTIgMGgxbTIgMGg1bTEgMGgxbTEgMGg3bS0yOSAxaDFtNSAwaDFtMSAwaDFtMiAwaDJtMSAwaDFtNyAwaDFtNSAwaDFtLTI5IDFoMW0xIDBoM20xIDBoMW0yIDBoM20yIDBoM20yIDBoMm0xIDBoMW0xIDBoM20xIDBoMW0tMjkgMWgxbTEgMGgzbTEgMGgxbTMgMGgxbTEgMGgzbTEgMGgybTQgMGgxbTEgMGgzbTEgMGgxbS0yOSAxaDFtMSAwaDNtMSAwaDFtMiAwaDFtNCAwaDFtMiAwaDRtMSAwaDFtMSAwaDNtMSAwaDFtLTI5IDFoMW01IDBoMW0yIDBoMW0zIDBoNW0yIDBoMW0xIDBoMW01IDBoMW0tMjkgMWg3bTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGg3bS0yMCAxaDFtMSAwaDRtMSAwaDFtMSAwaDFtLTE4IDFoMW00IDBoM20xIDBoMW0xIDBoMm0zIDBoMW0xIDBoM201IDBoMm0tMjkgMWgxbTMgMGgybTIgMGgzbTEgMGgybTIgMGgxbTEgMGgybTEgMGgxbTEgMGgybTEgMGgybS0yMiAxaDFtMyAwaDFtMSAwaDFtMiAwaDRtMSAwaDRtMSAwaDFtLTI1IDFoMm0xIDBoMW0zIDBoMW0xIDBoM20yIDBoMW0yIDBoM20xIDBoMW0xIDBoMm0tMjYgMWgxbTEgMGgxbTIgMGg0bTEgMGgxbTMgMGgybTUgMGgybTQgMGgxbS0yNyAxaDJtNCAwaDFtMiAwaDJtMSAwaDJtMSAwaDVtMSAwaDFtMSAwaDJtMiAwaDFtLTI5IDFoMW0zIDBoMW0xIDBoMW0xIDBoMm0xIDBoMm0xIDBoMm00IDBoNG0tMjMgMWgxbTEgMGgybTIgMGgzbTIgMGgxbTEgMGgzbTQgMGgybTEgMGgzbTEgMGgxbS0yOSAxaDJtMSAwaDFtMSAwaDVtMSAwaDVtMSAwaDFtMSAwaDFtMSAwaDFtMyAwaDRtLTI5IDFoMm0xIDBoM20yIDBoM20xIDBoMm0yIDBoMW0yIDBoMm0xIDBoM20zIDBoMW0tMjkgMWgybTEgMGgxbTEgMGg0bTIgMGg0bTEgMGg0bTQgMGgybTIgMGgxbS0yOSAxaDFtMiAwaDNtMyAwaDFtMSAwaDFtMiAwaDNtMiAwaDRtMSAwaDJtMiAwaDFtLTI5IDFoMW0xIDBoMW0yIDBoMm0yIDBoMm0zIDBoMW0xIDBoMm0yIDBoNW0xIDBoMW0xIDBoMW0tMjEgMWgxbTEgMGgzbTIgMGgxbTEgMGgxbTIgMGgxbTMgMGgzbS0yNyAxaDdtMSAwaDJtMyAwaDNtMiAwaDNtMSAwaDFtMSAwaDFtLTI1IDFoMW01IDBoMW02IDBoNG0yIDBoMm0zIDBoMm0tMjYgMWgxbTEgMGgzbTEgMGgxbTUgMGgxbTMgMGg5bTIgMGgybS0yOSAxaDFtMSAwaDNtMSAwaDFtMiAwaDJtMSAwaDFtNSAwaDNtMiAwaDFtMSAwaDNtLTI4IDFoMW0xIDBoM20xIDBoMW0yIDBoMW0zIDBoMW0xIDBoMW0zIDBoN20xIDBoMW0tMjggMWgxbTUgMGgxbTEgMGgybTEgMGgzbTIgMGgxbTEgMGgxbTIgMGgxbTIgMGgzbTEgMGgxbS0yOSAxaDdtMiAwaDFtMSAwaDVtMSAwaDNtMSAwaDJtMSAwaDFtMSAwaDEiLz48L3N2Zz4K" alt="Kod QR MyUBAT">
+      <div class="cap">Imbas untuk muat<br>turun aplikasi</div>
+    </div>
+  </div>
+
+  <div class="bar">Cari ayat yang sama dengan anda</div>
+
+  <div class="card">
+    <div class="you">&ldquo;Rumah saya jauh.&rdquo;</div>
+    <div class="arrow">&rarr; Ubat Melalui Pos</div>
+    <div class="note">Dihantar terus ke rumah.</div>
+  </div>
+
+  <div class="card">
+    <div class="you">&ldquo;Saya datang setiap bulan untuk temujanji.&rdquo;</div>
+    <div class="arrow">&rarr; Pandu Lalu atau Lokar</div>
+    <div class="note">Singgah sekejap selepas klinik. Tak perlu beratur.</div>
+  </div>
+
+  <div class="card">
+    <div class="you">&ldquo;Saya memandu.&rdquo;</div>
+    <div class="arrow">&rarr; Farmasi Pandu Lalu</div>
+    <div class="note">Ambil dari dalam kereta. Tiada parkir.</div>
+  </div>
+
+  <div class="card">
+    <div class="you">&ldquo;Saya bekerja &mdash; lapang malam atau hujung minggu.&rdquo;</div>
+    <div class="arrow">&rarr; Locker4U</div>
+    <div class="note">Buka 24 jam. Ambil dalam 3 hari.</div>
+  </div>
+
+  <div class="card">
+    <div class="you">&ldquo;Saya tiada telefon pintar.&rdquo;</div>
+    <div class="arrow">&rarr; Waris atau staf daftarkan</div>
+    <div class="note">Anak boleh mohon bagi pihak anda.</div>
+  </div>
+
+  <div class="note-box">
+    <b>Temujanji hampir setiap bulan?</b> Beritahu kami. Kami semak sama ada bekalan ubat anda boleh dipanjangkan, supaya kunjungan anda betul-betul berkurang.
+  </div>
+
+  <div class="bar">Waktu &amp; lokasi di HSIS Serdang</div>
+  <table class="hours">
+    <tr><th>Perkhidmatan</th><th>Waktu</th><th>Lokasi</th><th>Mohon awal</th></tr>
+    <tr><td>Farmasi Pandu Lalu</td><td>12.00 t.hari &ndash; 7.00 ptg<br>(Isnin &ndash; Jumaat)</td><td>Kaunter Pandu Lalu HSIS</td><td>7 hari bekerja</td></tr>
+    <tr><td>Locker4U</td><td>24 jam<br>(simpanan 3 hari)</td><td>Lokar Farmasi Klinik Pakar 1</td><td>5 hari bekerja</td></tr>
+    <tr><td>Ubat Melalui Pos</td><td>Dihantar ke alamat pilihan</td><td>&mdash;</td><td>3 &ndash; 4 minggu</td></tr>
+  </table>
+
+  <div class="fineprint">Muka 1 daripada 2 &middot; sila terbalikkan</div>
+</div>
+
+<!-- ============ MUKA 2 ============ -->
+<div class="page">
+
+  <div class="note-box" style="margin-top:0">
+    <b>Mohon sebelum ubat habis.</b> Sekurang-kurangnya 3 hingga 4 minggu awal bagi pos. Setiap permohonan disemak dalam 3 hingga 5 hari bekerja.
+  </div>
+
+  <div class="bar">Soalan lazim</div>
+  <div class="faq">
+    <p><b>&ldquo;Kalau saya tak suka, boleh berhenti?&rdquo;</b>Boleh, bila-bila masa. Tiada ikatan &mdash; anda kembali ke kaunter seperti biasa.</p>
+    <p><b>&ldquo;Semua ubat boleh?&rdquo;</b>Kebanyakan ubat susulan boleh. Ubat sejuk dan ubat kawalan perlu diambil di kaunter &mdash; staf akan maklumkan.</p>
+    <p><b>&ldquo;Bimbang ubat salah atau tak cukup.&rdquo;</b>Setiap bekalan disemak ahli farmasi sebelum dihantar. Ada masalah, kami betulkan tanpa kos.</p>
+    <p><b>&ldquo;Mahal ke bayar pos?&rdquo;</b>Ubat tetap percuma. Hanya caj kurier minimum. Lokar dan Pandu Lalu tiada caj langsung.</p>
+    <p><b>&ldquo;Macam mana saya tahu ubat dah dipos?&rdquo;</b>Nombor jejak dipaparkan dalam aplikasi MyUBAT sebaik ubat dihantar.</p>
+    <p><b>&ldquo;Kalau saya tiada di rumah?&rdquo;</b>Hantar ke alamat lain, atau pilih Lokar 24 jam.</p>
+    <p><b>&ldquo;Boleh orang lain ambil untuk saya?&rdquo;</b>Boleh. Bawa No. Rujukan MyUBAT dan kad pengenalan.</p>
+    <p><b>&ldquo;Saya nak jumpa ahli farmasi.&rdquo;</b>Kaunseling tetap ada &mdash; semasa temujanji anda atau melalui telefon.</p>
+  </div>
+
+  <div class="decide">
+    <h3>Keputusan anda hari ini &mdash; tandakan satu</h3>
+    <div class="opt">
+      <div class="box"></div>
+      <div><b>YA &mdash; saya daftar sendiri.</b><span class="sub">Imbas kod QR di muka hadapan dan daftar MyUBAT.</span></div>
+    </div>
+    <div class="opt">
+      <div class="box"></div>
+      <div><b>YA &mdash; tolong daftarkan saya.</b><span class="sub">Staf akan bantu daftar di kaunter sekarang. Lebih kurang 5 minit.</span></div>
+    </div>
+    <div class="split"></div>
+    <div class="opt">
+      <div class="box"></div>
+      <div><b>SAYA BERMINAT &mdash; nak baca dahulu.</b><span class="sub">Minta <i>Panduan Lengkap MyUBAT</i> daripada staf.</span></div>
+    </div>
+    <div class="opt">
+      <div class="box"></div>
+      <div><b>BELUM &mdash; saya kekal ambil di kaunter.</b><span class="sub">Tiada masalah. Tawaran ini kekal terbuka.</span></div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="big">03-8947 5555 &nbsp;samb. 1113</div>
+    <div class="sm">Jabatan Farmasi, Hospital Sultan Idris Shah, Serdang &middot; atau menu &ldquo;Meja Bantuan&rdquo; dalam aplikasi MyUBAT.</div>
+  </div>
+
+  <div class="fineprint">Muka 2 daripada 2</div>
+</div>
+
+</body>
+</html>

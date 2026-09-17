@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 100" width="430" height="100" role="img" aria-label="MyUBAT">
+
+  <defs>
+    <path id="lk-heart" d="M50,88 C22,64 8,50 8,33 C8,19 18,9 31,9 C39,9 46,13 50,20 C54,13 61,9 69,9 C82,9 92,19 92,33 C92,50 78,64 50,88 Z"/>
+    <rect id="lk-pill" x="-18" y="-10" width="36" height="20" rx="10" ry="10"/>
+    <clipPath id="lk-clip"><use href="#lk-pill"/></clipPath>
+  </defs>
+
+  <rect x="2" y="2" width="96" height="96" rx="23" ry="23" fill="#000000"/>
+
+  <g transform="translate(45.5 44) rotate(-37) scale(0.70) translate(-50 -50)">
+    <use href="#lk-heart" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(61.5 63.5) rotate(48)">
+    <use href="#lk-pill" fill="none" stroke="#000000" stroke-width="11"/>
+    <g clip-path="url(#lk-clip)">
+      <rect x="-18" y="-10" width="18" height="20" fill="#FFFFFF"/>
+      <rect x="0" y="-10" width="18" height="20" fill="#000000"/>
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#FFFFFF" stroke-width="4.6"/>
+    </g>
+    <use href="#lk-pill" fill="none" stroke="#FFFFFF" stroke-width="4.6"/>
+  </g>
+
+  <text x="128" y="70" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="bold" fill="#000000" letter-spacing="-1">MyUBAT</text>
+</svg>

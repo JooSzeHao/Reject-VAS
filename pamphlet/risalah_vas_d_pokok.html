@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<title>Risalah &amp; Borang VAS — Pokok Keputusan</title>
+<style>
+  @page { size: A4; margin: 10mm 12mm 8mm 12mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: "Arial","Helvetica",sans-serif; color: #000; font-size: 11pt; line-height: 1.32;
+         -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  .head { display: flex; align-items: flex-end; gap: 7mm; border-bottom: 2.5pt solid #000; padding-bottom: 2.6mm; }
+  .head .words { flex: 1 1 auto; }
+  .head .eyebrow { font-size: 8.6pt; letter-spacing: .13em; text-transform: uppercase; margin: 0 0 1.2mm 0; }
+  .head .tel { font-size: 9.4pt; font-weight: bold; letter-spacing: .04em; margin: 0 0 2.4mm 0; }
+  .head h1 { font-size: 20pt; line-height: 1.05; margin: 0 0 1.6mm 0; }
+  .head .sub { margin: 0; font-size: 10.6pt; }
+  .brand { flex: 0 0 auto; width: 26mm; text-align: center; }
+  .brand .mark { display: flex; align-items: center; justify-content: center; gap: 1.5mm; margin-bottom: 1.5mm; }
+  .brand .mark img { width: 7mm; height: 7mm; display: block; }
+  .brand .mark b { font-size: 11pt; letter-spacing: -.2pt; }
+  .brand img.qr { width: 22mm; height: 22mm; display: block; margin: 0 auto; }
+  .brand .cap { font-size: 7.6pt; margin-top: .8mm; line-height: 1.2; }
+
+  h2 { font-size: 12.2pt; text-transform: uppercase; letter-spacing: .05em;
+       margin: 3.2mm 0 1mm 0; padding-bottom: 1mm; border-bottom: 2pt solid #000; }
+  h2.first { margin-top: 0; }
+  .tree { width: 100%; display: block; margin-top: 2mm; }
+
+  .note-box { border: 2pt solid #000; padding: 2.1mm 2.8mm; font-size: 9.5pt; margin-top: 2.6mm; }
+
+  .faq { column-count: 2; column-gap: 5mm; margin-top: .6mm; }
+  .faq p { margin: 0 0 1.3mm 0; font-size: 9.2pt; break-inside: avoid; }
+  .faq b { display: block; font-size: 9.6pt; }
+
+  .decide { border: 2.5pt solid #000; padding: 3.2mm 4mm; margin-top: 3.4mm; }
+  .decide h3 { margin: 0 0 2.6mm 0; font-size: 12pt; text-transform: uppercase; letter-spacing: .05em; }
+  .tick { display: flex; align-items: flex-start; margin-bottom: 2.2mm; }
+  .tick:last-child { margin-bottom: 0; }
+  .box { flex: 0 0 auto; width: 7mm; height: 7mm; border: 1.5pt solid #000; margin-right: 3.5mm; }
+  .tick .ttl { display: block; font-size: 11pt; font-weight: bold; }
+  .tick .sub { font-size: 9.6pt; color: #222; }
+  .split { border-top: 1pt solid #000; margin: 2.2mm 0 2.2mm 10.5mm; }
+
+  .form { border: 3pt solid #000; padding: 3.6mm 4mm; margin-top: 3.4mm; }
+  .form h3 { margin: 0 0 1.6mm 0; font-size: 12pt; text-transform: uppercase; letter-spacing: .04em; }
+  .form .only { font-size: 9.6pt; margin: 0 0 2.4mm 0; }
+  .form .policy { font-size: 8.8pt; color: #222; margin: 0 0 3mm 0; }
+  .frow { display: flex; gap: 5mm; margin-bottom: 3mm; }
+  .fld { flex: 1 1 auto; }
+  .fld .lab { font-size: 8.8pt; margin-bottom: .6mm; }
+  .fld .line { border-bottom: 1pt solid #000; height: 5.6mm; }
+  .decl { font-size: 10.2pt; border-top: 1pt solid #000; border-bottom: 1pt solid #000;
+          padding: 2.4mm 0; margin: 1mm 0 3.4mm 0; }
+  .sig { display: flex; gap: 8mm; }
+  .sig .col { flex: 1 1 50%; }
+  .sig .sline { border-bottom: 1pt solid #000; height: 12mm; }
+  .sig .who { font-size: 9.4pt; font-weight: bold; margin-top: 1.2mm; }
+  .sig .nd { font-size: 8.8pt; margin-top: 1.6mm; }
+
+
+  /* --- decision-tree SVG --- */
+  .tree text { font-family: Arial, Helvetica, sans-serif; fill: #000; }
+  .tree .qbox, .tree .lbox { fill: #fff; stroke: #000; }
+  .tree .qbox { stroke-width: 2.5; }
+  .tree .lbox { stroke-width: 3; }
+  .tree .tab { fill: #000; }
+  .tree .ql { font-size: 15px; letter-spacing: 1.2px; }
+  .tree .qt { font-size: 20px; font-weight: bold; }
+  .tree .lt { font-size: 20px; font-weight: bold; }
+  .tree .lsfx { font-size: 15px; font-weight: bold; }
+  .tree .ln { font-size: 14.5px; }
+  .tree .edge { stroke: #000; stroke-width: 2.5; fill: none; }
+  .tree .elabel { font-size: 16px; font-weight: bold; }
+
+  .fineprint { margin-top: 2mm; font-size: 8.2pt; color: #444; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="head">
+    <div class="words">
+      <p class="eyebrow">Jabatan Farmasi &middot; Hospital Sultan Idris Shah, Serdang</p>
+      <p class="tel">Tel: 03-8947 5555 &nbsp;samb. 1113</p>
+      <h1>Ambil ubat susulan<br>tanpa beratur.</h1>
+      <p class="sub">Perkhidmatan Nilai Tambah Farmasi (VAS)</p>
+    </div>
+    <div class="brand">
+      <div class="mark"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJNeVVCQVQiPgogIDxkZWZzPgogICAgPHBhdGggaWQ9Im1tLWhlYXJ0IiBkPSJNNTAsODggQzIyLDY0IDgsNTAgOCwzMyBDOCwxOSAxOCw5IDMxLDkgQzM5LDkgNDYsMTMgNTAsMjAgQzU0LDEzIDYxLDkgNjksOSBDODIsOSA5MiwxOSA5MiwzMyBDOTIsNTAgNzgsNjQgNTAsODggWiIvPgogICAgPHJlY3QgaWQ9Im1tLXBpbGwiIHg9Ii0xOCIgeT0iLTEwIiB3aWR0aD0iMzYiIGhlaWdodD0iMjAiIHJ4PSIxMCIgcnk9IjEwIi8+CiAgICA8Y2xpcFBhdGggaWQ9Im1tLWNsaXAiPjx1c2UgaHJlZj0iI21tLXBpbGwiLz48L2NsaXBQYXRoPgogIDwvZGVmcz4KCiAgPHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9Ijk2IiBoZWlnaHQ9Ijk2IiByeD0iMjMiIHJ5PSIyMyIgZmlsbD0iIzAwMDAwMCIvPgoKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NS41IDQ0KSByb3RhdGUoLTM3KSBzY2FsZSgwLjcwKSB0cmFuc2xhdGUoLTUwIC01MCkiPgogICAgPHVzZSBocmVmPSIjbW0taGVhcnQiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPC9nPgoKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MS41IDYzLjUpIHJvdGF0ZSg0OCkiPgogICAgPHVzZSBocmVmPSIjbW0tcGlsbCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjExIi8+CiAgICA8ZyBjbGlwLXBhdGg9InVybCgjbW0tY2xpcCkiPgogICAgICA8cmVjdCB4PSItMTgiIHk9Ii0xMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjIwIiBmaWxsPSIjRkZGRkZGIi8+CiAgICAgIDxyZWN0IHg9IjAiIHk9Ii0xMCIgd2lkdGg9IjE4IiBoZWlnaHQ9IjIwIiBmaWxsPSIjMDAwMDAwIi8+CiAgICAgIDxsaW5lIHgxPSIwIiB5MT0iLTEwIiB4Mj0iMCIgeTI9IjEwIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNC42Ii8+CiAgICA8L2c+CiAgICA8dXNlIGhyZWY9IiNtbS1waWxsIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNC42Ii8+CiAgPC9nPgo8L3N2Zz4K" alt="MyUBAT"><b>MyUBAT</b></div>
+      <img class="qr" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMzAiIGhlaWdodD0iMzMwIiBjbGFzcz0ic2Vnbm8iPjxwYXRoIHRyYW5zZm9ybT0ic2NhbGUoMTApIiBjbGFzcz0icXJsaW5lIiBzdHJva2U9IiMwMDAiIGQ9Ik0yIDIuNWg3bTEgMGgxbTIgMGgxbTIgMGg1bTEgMGgxbTEgMGg3bS0yOSAxaDFtNSAwaDFtMSAwaDFtMiAwaDJtMSAwaDFtNyAwaDFtNSAwaDFtLTI5IDFoMW0xIDBoM20xIDBoMW0yIDBoM20yIDBoM20yIDBoMm0xIDBoMW0xIDBoM20xIDBoMW0tMjkgMWgxbTEgMGgzbTEgMGgxbTMgMGgxbTEgMGgzbTEgMGgybTQgMGgxbTEgMGgzbTEgMGgxbS0yOSAxaDFtMSAwaDNtMSAwaDFtMiAwaDFtNCAwaDFtMiAwaDRtMSAwaDFtMSAwaDNtMSAwaDFtLTI5IDFoMW01IDBoMW0yIDBoMW0zIDBoNW0yIDBoMW0xIDBoMW01IDBoMW0tMjkgMWg3bTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGgxbTEgMGg3bS0yMCAxaDFtMSAwaDRtMSAwaDFtMSAwaDFtLTE4IDFoMW00IDBoM20xIDBoMW0xIDBoMm0zIDBoMW0xIDBoM201IDBoMm0tMjkgMWgxbTMgMGgybTIgMGgzbTEgMGgybTIgMGgxbTEgMGgybTEgMGgxbTEgMGgybTEgMGgybS0yMiAxaDFtMyAwaDFtMSAwaDFtMiAwaDRtMSAwaDRtMSAwaDFtLTI1IDFoMm0xIDBoMW0zIDBoMW0xIDBoM20yIDBoMW0yIDBoM20xIDBoMW0xIDBoMm0tMjYgMWgxbTEgMGgxbTIgMGg0bTEgMGgxbTMgMGgybTUgMGgybTQgMGgxbS0yNyAxaDJtNCAwaDFtMiAwaDJtMSAwaDJtMSAwaDVtMSAwaDFtMSAwaDJtMiAwaDFtLTI5IDFoMW0zIDBoMW0xIDBoMW0xIDBoMm0xIDBoMm0xIDBoMm00IDBoNG0tMjMgMWgxbTEgMGgybTIgMGgzbTIgMGgxbTEgMGgzbTQgMGgybTEgMGgzbTEgMGgxbS0yOSAxaDJtMSAwaDFtMSAwaDVtMSAwaDVtMSAwaDFtMSAwaDFtMSAwaDFtMyAwaDRtLTI5IDFoMm0xIDBoM20yIDBoM20xIDBoMm0yIDBoMW0yIDBoMm0xIDBoM20zIDBoMW0tMjkgMWgybTEgMGgxbTEgMGg0bTIgMGg0bTEgMGg0bTQgMGgybTIgMGgxbS0yOSAxaDFtMiAwaDNtMyAwaDFtMSAwaDFtMiAwaDNtMiAwaDRtMSAwaDJtMiAwaDFtLTI5IDFoMW0xIDBoMW0yIDBoMm0yIDBoMm0zIDBoMW0xIDBoMm0yIDBoNW0xIDBoMW0xIDBoMW0tMjEgMWgxbTEgMGgzbTIgMGgxbTEgMGgxbTIgMGgxbTMgMGgzbS0yNyAxaDdtMSAwaDJtMyAwaDNtMiAwaDNtMSAwaDFtMSAwaDFtLTI1IDFoMW01IDBoMW02IDBoNG0yIDBoMm0zIDBoMm0tMjYgMWgxbTEgMGgzbTEgMGgxbTUgMGgxbTMgMGg5bTIgMGgybS0yOSAxaDFtMSAwaDNtMSAwaDFtMiAwaDJtMSAwaDFtNSAwaDNtMiAwaDFtMSAwaDNtLTI4IDFoMW0xIDBoM20xIDBoMW0yIDBoMW0zIDBoMW0xIDBoMW0zIDBoN20xIDBoMW0tMjggMWgxbTUgMGgxbTEgMGgybTEgMGgzbTIgMGgxbTEgMGgxbTIgMGgxbTIgMGgzbTEgMGgxbS0yOSAxaDdtMiAwaDFtMSAwaDVtMSAwaDNtMSAwaDJtMSAwaDFtMSAwaDEiLz48L3N2Zz4K" alt="Kod QR MyUBAT">
+      <div class="cap">Imbas untuk muat<br>turun aplikasi</div>
+    </div>
+  </div>
+
+  <h2>Perkhidmatan mana untuk saya?</h2>
+  <svg class="tree" viewBox="0 0 700 496" role="img" aria-label="Pokok keputusan">
+    <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker></defs>
+    <rect class="qbox" x="4" y="0" width="322" height="88"/>
+    <text class="ql" x="20" y="24">SOALAN 1</text>
+    <text class="qt" x="20" y="52">Mahu ubat dihantar</text>
+    <text class="qt" x="20" y="74">terus ke rumah?</text>
+    <line class="edge" x1="326" y1="44" x2="380" y2="44" marker-end="url(#ar)"/>
+    <text class="elabel" x="353" y="34" text-anchor="middle">YA</text>
+    <rect class="lbox" x="386" y="0" width="310" height="88"/>
+    <rect class="tab" x="386" y="0" width="11" height="88"/>
+    <text class="lt" x="410" y="34">UBAT MELALUI POS<tspan class="lsfx"> (UMP)</tspan></text>
+    <text class="ln" x="410" y="58">Dihantar ke alamat pilihan.</text>
+    <text class="ln" x="410" y="76">Mohon sekurang-kurangnya 3 minggu awal.</text>
+    <line class="edge" x1="165" y1="88" x2="165" y2="118" marker-end="url(#ar)"/>
+    <text class="elabel" x="177" y="109">TIDAK</text>
+    <rect class="qbox" x="4" y="122" width="322" height="124"/>
+    <text class="ql" x="20" y="146">SOALAN 2</text>
+    <text class="qt" x="20" y="174">Anda datang ke</text>
+    <text class="qt" x="20" y="196">hospital dengan kereta?</text>
+    <line class="edge" x1="326" y1="184" x2="380" y2="184" marker-end="url(#ar)"/>
+    <text class="elabel" x="353" y="174" text-anchor="middle">YA</text>
+    <rect class="lbox" x="386" y="122" width="310" height="124"/>
+    <rect class="tab" x="386" y="122" width="11" height="124"/>
+    <text class="lt" x="410" y="156">FARMASI PANDU LALU<tspan class="lsfx"> (FPL)</tspan></text>
+    <text class="ln" x="410" y="180">Ambil dari dalam kereta.</text>
+    <text class="ln" x="410" y="198">Isnin – Khamis:  12.00 tgh – 7.00 ptg</text>
+    <text class="ln" x="410" y="216">Jumaat:  2.45 ptg – 7.00 ptg</text>
+    <text class="ln" x="410" y="234">Sabtu:  9.00 pagi – 1.00 tgh</text>
+    <line class="edge" x1="165" y1="246" x2="165" y2="276" marker-end="url(#ar)"/>
+    <text class="elabel" x="177" y="267">TIDAK</text>
+    <rect class="qbox" x="4" y="280" width="322" height="108"/>
+    <text class="ql" x="20" y="304">SOALAN 3</text>
+    <text class="qt" x="20" y="332">Mahu ambil bila-bila</text>
+    <text class="qt" x="20" y="354">masa — termasuk malam</text>
+    <text class="qt" x="20" y="376">dan hujung minggu?</text>
+    <line class="edge" x1="326" y1="334" x2="380" y2="334" marker-end="url(#ar)"/>
+    <text class="elabel" x="353" y="324" text-anchor="middle">YA</text>
+    <rect class="lbox" x="386" y="280" width="310" height="108"/>
+    <rect class="tab" x="386" y="280" width="11" height="108"/>
+    <text class="lt" x="410" y="314">LOCKER4U</text>
+    <text class="ln" x="410" y="338">Buka 24 jam. Ambil dalam 3 hari.</text>
+    <line class="edge" x1="165" y1="388" x2="165" y2="418" marker-end="url(#ar)"/>
+    <text class="elabel" x="177" y="409">TIDAK</text>
+    <rect class="lbox" x="4" y="422" width="692" height="70"/>
+    <rect class="tab" x="4" y="422" width="11" height="70"/>
+    <text class="lt" x="28" y="456">TANYA STAF KAMI</text>
+    <text class="ln" x="28" y="480">Kami cadangkan pilihan yang paling sesuai untuk anda.</text>
+  </svg>
+
+  <div class="note-box">
+    <b>Temujanji hampir setiap bulan?</b> Beritahu kami. Kami semak sama ada bekalan ubat anda boleh dibekalkan bersama, supaya kunjungan anda betul-betul berkurang.
+  </div>
+
+  <h2>Soalan lazim</h2>
+  <div class="faq">
+    <p><b>“Semua ubat boleh?”</b>Kebanyakan ubat susulan boleh. Ubat sejuk dan ubat kawalan tidak boleh dihantar — staf akan maklumkan.</p>
+    <p><b>“Bimbang ubat salah atau tak cukup.”</b>Setiap bekalan disemak ahli farmasi sebelum dihantar. Ada masalah, kami betulkan tanpa kos.</p>
+    <p><b>“Mahal ke bayar pos?”</b>Ubat tetap percuma. Hanya caj kurier minimum. Lokar dan Pandu Lalu tiada caj langsung.</p>
+    <p><b>“Macam mana saya tahu ubat dah dipos?”</b>Nombor jejak dipaparkan dalam aplikasi MyUBAT sebaik ubat dihantar.</p>
+    <p><b>“Di mana lokasi Lokar Ubat?”</b>Di luar Farmasi Pusat Jantung.</p>
+    <p><b>“Kalau saya tiada di rumah?”</b>Hantar ke alamat lain, atau pilih Lokar 24 jam.</p>
+    <p><b>“Boleh orang lain ambil untuk saya?”</b>Boleh. Bawa No. Rujukan MyUBAT dan kad pengenalan.</p>
+    <p><b>“Saya nak jumpa ahli farmasi.”</b>Kaunseling tetap ada — semasa temujanji anda atau melalui telefon.</p>
+  </div>
+
+  <div class="fineprint">Muka 1 daripada 2 &middot; sila terbalikkan</div>
+</div>
+
+<div class="page">
+  <h2 class="first">Bagaimana saya mendaftar?</h2>
+  <svg class="tree" viewBox="0 0 700 282" role="img" aria-label="Pokok keputusan">
+    <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker></defs>
+    <rect class="qbox" x="4" y="0" width="322" height="70"/>
+    <text class="ql" x="20" y="24">SOALAN 1</text>
+    <text class="qt" x="20" y="52">Anda ada telefon pintar?</text>
+    <line class="edge" x1="326" y1="35" x2="380" y2="35" marker-end="url(#ar2)"/>
+    <text class="elabel" x="353" y="25" text-anchor="middle">YA</text>
+    <rect class="lbox" x="386" y="0" width="310" height="70"/>
+    <rect class="tab" x="386" y="0" width="11" height="70"/>
+    <text class="lt" x="410" y="34">DAFTAR SENDIRI</text>
+    <text class="ln" x="410" y="58">Imbas kod QR di muka hadapan.</text>
+    <line class="edge" x1="165" y1="70" x2="165" y2="100" marker-end="url(#ar2)"/>
+    <text class="elabel" x="177" y="91">TIDAK</text>
+    <rect class="qbox" x="4" y="104" width="322" height="70"/>
+    <text class="ql" x="20" y="128">SOALAN 2</text>
+    <text class="qt" x="20" y="156">Ada waris yang boleh tolong?</text>
+    <line class="edge" x1="326" y1="139" x2="380" y2="139" marker-end="url(#ar2)"/>
+    <text class="elabel" x="353" y="129" text-anchor="middle">YA</text>
+    <rect class="lbox" x="386" y="104" width="310" height="70"/>
+    <rect class="tab" x="386" y="104" width="11" height="70"/>
+    <text class="lt" x="410" y="138">WARIS DAFTARKAN</text>
+    <text class="ln" x="410" y="162">Anak boleh mohon bagi pihak anda.</text>
+    <line class="edge" x1="165" y1="174" x2="165" y2="204" marker-end="url(#ar2)"/>
+    <text class="elabel" x="177" y="195">TIDAK</text>
+    <rect class="lbox" x="4" y="208" width="692" height="70"/>
+    <rect class="tab" x="4" y="208" width="11" height="70"/>
+    <text class="lt" x="28" y="242">STAF DAFTARKAN DI KAUNTER</text>
+    <text class="ln" x="28" y="266">Beritahu staf hari ini — lebih kurang 5 minit sahaja.</text>
+  </svg>
+
+
+  <div class="decide">
+    <h3>Keputusan anda hari ini &mdash; tandakan satu</h3>
+    <div class="tick"><div class="box"></div>
+      <div><span class="ttl">YA — tolong daftarkan saya.</span><span class="sub">Staf akan bantu daftar di kaunter sekarang. Lebih kurang 5 minit.</span></div></div>
+    <div class="tick"><div class="box"></div>
+      <div><span class="ttl">YA — saya daftar sendiri.</span><span class="sub">Imbas kod QR di muka hadapan dan daftar MyUBAT.</span></div></div>
+    <div class="split"></div>
+    <div class="tick"><div class="box"></div>
+      <div><span class="ttl">SAYA BERMINAT — nak baca dahulu.</span><span class="sub">Minta <i>Panduan Lengkap MyUBAT</i> daripada staf.</span></div></div>
+    <div class="tick"><div class="box"></div>
+      <div><span class="ttl">BELUM — saya kekal ambil di kaunter.</span><span class="sub">Sila lengkapkan <b>Bahagian Pengesahan</b> di bawah.</span></div></div>
+  </div>
+
+  <div class="form">
+    <h3>Bahagian Pengesahan</h3>
+    <p class="only"><b>Lengkapkan bahagian ini HANYA jika anda menanda &ldquo;BELUM&rdquo;.</b></p>
+    <p class="policy">Polisi hospital menetapkan bahawa bekalan ubat preskripsi ulangan dibekalkan melalui MyUBAT &mdash; Ubat Melalui Pos (UMP), Farmasi Pandu Lalu (FPL) dan Lokar Ubat.</p>
+
+    <div class="frow">
+      <div class="fld" style="flex:2"><div class="lab">Nama Pesakit</div><div class="line"></div></div>
+      <div class="fld"><div class="lab">No. Pendaftaran (MRN)</div><div class="line"></div></div>
+      <div class="fld"><div class="lab">Jabatan</div><div class="line"></div></div>
+    </div>
+
+    <div class="decl">Saya dengan ini memilih untuk <b>TIDAK</b> menggunakan mana-mana perkhidmatan VAS yang ditawarkan.</div>
+
+    <div class="sig">
+      <div class="col">
+        <div class="sline"></div>
+        <div class="who">Tandatangan Pesakit / Wakil</div>
+        <div class="nd">Nama: &nbsp;______________________ &nbsp; Tarikh: &nbsp;____________</div>
+      </div>
+      <div class="col">
+        <div class="sline"></div>
+        <div class="who">Disaksikan oleh (Kakitangan Farmasi)</div>
+        <div class="nd">Nama: &nbsp;______________________ &nbsp; Tarikh: &nbsp;____________</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fineprint">Muka 2 daripada 2</div>
+</div>
+
+</body>
+</html>
