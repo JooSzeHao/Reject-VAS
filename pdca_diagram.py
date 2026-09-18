@@ -2,7 +2,13 @@
 
 Gelang empat segmen berputar mengikut arah jam (Plan -> Do -> Check -> Act),
 tujuan utama di tengah kitaran, teks diringkaskan kepada label pendek sahaja.
+
+  python3 pdca_diagram.py          rajah penuh berserta teks
+  python3 pdca_diagram.py gelang   gelang sahaja, tanpa teks, untuk slaid
+                                   (segi empat sama, julat tepat +/-EXT unit)
 """
+import sys
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -10,6 +16,8 @@ from matplotlib.patches import Wedge, Circle, Polygon
 import numpy as np
 
 OUT = '/home/user/Reject-VAS/output/PDCA_VAS_Kitaran.png'
+OUT_RING = '/home/user/Reject-VAS/output/pdca_gelang.png'
+EXT = 0.90          # separuh-lebar paparan gelang sahaja, dalam unit data
 
 # Teal Trust — palet sama seperti deck
 DEEP = '#083F49'
@@ -46,15 +54,7 @@ PHASES = [
          tx=-TX, ty=0.68, ha='right'),
 ]
 
-fig, ax = plt.subplots(figsize=(15.5, 9.5), dpi=200)
-fig.patch.set_alpha(0)          # latar telus
-ax.set_xlim(-2.2, 2.2)
-ax.set_ylim(-1.35, 1.35)
-ax.set_aspect('equal')
-ax.axis('off')
-
-
-def arrow_head(theta_deg, color):
+def arrow_head(ax, theta_deg, color):
     """Mata anak panah pada hujung segmen, menghala mengikut arah jam."""
     tip = np.radians(theta_deg - HEAD)
     base = np.radians(theta_deg)
@@ -64,11 +64,43 @@ def arrow_head(theta_deg, color):
     ax.add_patch(Polygon(pts, closed=True, facecolor=color, edgecolor='none', zorder=3))
 
 
-for p in PHASES:
-    ax.add_patch(Wedge((0, 0), R_OUT, p['a1'], p['a2'], width=R_OUT - R_IN,
-                       facecolor=p['color'], edgecolor='none', zorder=2))
-    arrow_head(p['a1'], p['color'])
+def draw_ring(ax):
+    """Empat segmen, mata panah dan cakera tengah — tanpa sebarang teks."""
+    for p in PHASES:
+        ax.add_patch(Wedge((0, 0), R_OUT, p['a1'], p['a2'], width=R_OUT - R_IN,
+                           facecolor=p['color'], edgecolor='none', zorder=2))
+        arrow_head(ax, p['a1'], p['color'])
+    ax.add_patch(Circle((0, 0), R_CENTRE, facecolor=DEEP, edgecolor='none', zorder=5))
 
+
+def write_ring():
+    """Gelang sahaja: segi empat sama, paksi memenuhi rajah supaya skala tepat."""
+    fig = plt.figure(figsize=(6, 6), dpi=300)
+    fig.patch.set_alpha(0)
+    ax = fig.add_axes([0, 0, 1, 1])
+    ax.set_xlim(-EXT, EXT)
+    ax.set_ylim(-EXT, EXT)
+    ax.set_aspect('equal')
+    ax.axis('off')
+    draw_ring(ax)
+    fig.savefig(OUT_RING, dpi=300, transparent=True)
+    print('Ditulis:', OUT_RING, f'(julat +/-{EXT} unit, R_OUT {R_OUT})')
+
+
+if 'gelang' in sys.argv[1:]:
+    write_ring()
+    raise SystemExit
+
+fig, ax = plt.subplots(figsize=(15.5, 9.5), dpi=200)
+fig.patch.set_alpha(0)          # latar telus
+ax.set_xlim(-2.2, 2.2)
+ax.set_ylim(-1.35, 1.35)
+ax.set_aspect('equal')
+ax.axis('off')
+
+draw_ring(ax)
+
+for p in PHASES:
     mid = np.radians((p['a1'] + p['a2']) / 2)
     r_lab = R_MID + 0.015
     cx, cy = r_lab * np.cos(mid), r_lab * np.sin(mid)
@@ -88,7 +120,6 @@ for p in PHASES:
             lw=3.5, solid_capstyle='round', zorder=1)
 
 # tujuan utama di tengah kitaran
-ax.add_patch(Circle((0, 0), R_CENTRE, facecolor=DEEP, edgecolor='none', zorder=5))
 ax.text(0, 0.162, 'MENINGKATKAN', ha='center', va='center', color=MINT,
         fontsize=12.5, fontweight='bold', zorder=6)
 ax.text(0, 0.038, 'VAS%', ha='center', va='center', color=WHITE,

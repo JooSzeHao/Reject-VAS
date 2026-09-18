@@ -1,13 +1,15 @@
-/* Rajah PDCA sebagai satu slaid boleh sunting (bentuk asli, bukan imej).
- * Setiap segmen ialah bentuk "pie", mata panah ialah segi tiga, dan semua
- * teks ialah kotak teks — boleh diedit terus dalam Google Slides / PowerPoint.
- * pptxgenjs menulis <a:avLst/> kosong untuk bentuk pie, jadi setiap segmen
- * menjadi bulatan penuh. Selepas fail ditulis, skrip ini membuka semula zip
- * pptx dan menyuntik sudut mula/tamat setiap pie — satu sumber sudut sahaja.
+/* Rajah PDCA sebagai satu slaid: gelang ialah imej tetap (dijana oleh
+ * `python3 pdca_diagram.py gelang`), manakala setiap perkataan ialah kotak
+ * teks berasingan yang boleh diedit dalam Google Slides / PowerPoint.
+ *
+ * Imej gelang dilukis dalam julat +/-0.90 unit data dan diletakkan sebagai
+ * segi empat sama bersisi S inci, jadi 1 unit data = S/1.8 inci. Semua
+ * kedudukan teks dikira daripada skala itu supaya label sentiasa jatuh di
+ * tengah jalur gelang walaupun saiz S diubah.
  */
 const pptxgen = require('pptxgenjs');
-const fs = require('fs');
-const JSZip = require('jszip');
+
+const RING = '/home/user/Reject-VAS/output/pdca_gelang.png';
 const OUT = '/home/user/Reject-VAS/output/PDCA_VAS_Kitaran_Slaid.pptx';
 
 const DEEP = '083F49';
@@ -22,31 +24,30 @@ const WHITE = 'FFFFFF';
 const HEAD = 'Cambria';
 const SANS = 'Calibri';
 
-const CX = 6.667, CY = 4.0;            // pusat kitaran
-const R_OUT = 2.30, R_GAP = 1.10, R_CENTRE = 0.95;
-const R_MID = (R_GAP + R_OUT) / 2;
-const HEADLEN = 12;                    // darjah, anjakan mata panah
-const R_LABEL = (1.10 + 2.30) / 2 + 0.05;   // jejari label fasa
+const CX = 6.667, CY = 4.0;      // pusat kitaran, inci
+const S = 5.2;                    // sisi imej gelang, inci
+const U = S / 1.8;                // 1 unit data = U inci
+const R_MID = 0.63 * U;           // jejari tengah jalur (0.46–0.80 unit)
+const R_LABEL = R_MID + 0.02;
 
 const rad = (d) => (d * Math.PI) / 180;
 const px = (r, a) => CX + r * Math.cos(rad(a));
 const py = (r, a) => CY - r * Math.sin(rad(a));   // y slaid ke bawah
 
-// a1 = hujung arah jam (tempat mata panah), a2 = pangkal. Sudut matematik.
 const PHASES = [
-  { key: 'PLAN', word: 'Rancang', color: TEAL, a1: 10, a2: 80,
+  { key: 'PLAN', word: 'Rancang', color: TEAL, mid: 45,
     items: ['Asas 36.8%', 'Sasaran 65%', 'Hipotesis: terlalu bergantung UMP'],
-    bx: 9.25, by: 1.05, align: 'left' },
-  { key: 'DO', word: 'Laksana', color: SEA, a1: 280, a2: 350,
+    bx: 9.45, by: 1.05, align: 'left' },
+  { key: 'DO', word: 'Laksana', color: SEA, mid: 315,
     items: ['Pelbagaikan servis', 'eSyms · FPL · IDTF', 'Tambah lokar ubat'],
-    bx: 9.25, by: 4.85, align: 'left' },
-  { key: 'CHECK', word: 'Semak', color: AMBER, a1: 190, a2: 260,
+    bx: 9.45, by: 4.85, align: 'left' },
+  { key: 'CHECK', word: 'Semak', color: AMBER, mid: 225,
     items: ['VAS% naik ke 54.3%', 'Kajian penolakan VAS', 'Kelemahan dikenal pasti'],
-    bx: 0.35, by: 4.85, align: 'right' },
-  { key: 'ACT', word: 'Tindak', color: DEEP, a1: 100, a2: 170,
+    bx: 0.30, by: 4.85, align: 'right' },
+  { key: 'ACT', word: 'Tindak', color: DEEP, mid: 135,
     items: ['Kekalkan promosi & servis sedia ada', 'Projek inovasi servis baharu',
             'Borang pengesahan penolakan'],
-    bx: 0.35, by: 1.05, align: 'right' },
+    bx: 0.30, by: 1.05, align: 'right' },
 ];
 
 const pres = new pptxgen();
@@ -62,69 +63,39 @@ s.addText('KITARAN PDCA', {
   fontFace: HEAD, fontSize: 24, bold: true, color: INK, margin: 0,
 });
 
-// --- segmen pie (sudut disuntik kemudian, ikut susunan penambahan) ---
-PHASES.forEach((p) => {
-  s.addShape(pres.ShapeType.pie, {
-    x: CX - R_OUT, y: CY - R_OUT, w: R_OUT * 2, h: R_OUT * 2,
-    fill: { color: p.color }, line: { type: 'none' },
-  });
-});
+s.addImage({ path: RING, x: CX - S / 2, y: CY - S / 2, w: S, h: S });
 
-// --- lubang tengah + cakera tujuan ---
-s.addShape(pres.ShapeType.ellipse, {
-  x: CX - R_GAP, y: CY - R_GAP, w: R_GAP * 2, h: R_GAP * 2,
-  fill: { color: WHITE }, line: { type: 'none' },
-});
-s.addShape(pres.ShapeType.ellipse, {
-  x: CX - R_CENTRE, y: CY - R_CENTRE, w: R_CENTRE * 2, h: R_CENTRE * 2,
-  fill: { color: DEEP }, line: { type: 'none' },
-});
-
-// --- mata panah ---
+// label fasa, di dalam jalur gelang
 PHASES.forEach((p) => {
-  const a = p.a1 - HEADLEN / 2;
-  const w = 0.86, h = 0.6;
-  s.addShape(pres.ShapeType.triangle, {
-    x: px(R_MID, a) - w / 2, y: py(R_MID, a) - h / 2, w, h,
-    fill: { color: p.color }, line: { type: 'none' }, rotate: (180 - a + 360) % 360,
-  });
-});
-
-// --- label fasa di dalam gelang ---
-PHASES.forEach((p) => {
-  const a = (p.a1 + p.a2) / 2;
-  const x = px(R_LABEL, a), y = py(R_LABEL, a);
+  const x = px(R_LABEL, p.mid), y = py(R_LABEL, p.mid);
   s.addText(p.key, {
-    x: x - 0.75, y: y - 0.39, w: 1.5, h: 0.46, align: 'center', valign: 'middle',
-    fontFace: HEAD, fontSize: 20, bold: true, color: WHITE, margin: 0,
+    x: x - 0.8, y: y - 0.31, w: 1.6, h: 0.36, align: 'center', valign: 'middle',
+    fontFace: HEAD, fontSize: 18, bold: true, color: WHITE, margin: 0,
   });
   s.addText(p.word, {
-    x: x - 0.75, y: y + 0.08, w: 1.5, h: 0.34, align: 'center', valign: 'middle',
-    fontFace: SANS, fontSize: 12, color: WHITE, margin: 0,
+    x: x - 0.8, y: y + 0.07, w: 1.6, h: 0.28, align: 'center', valign: 'middle',
+    fontFace: SANS, fontSize: 11, color: WHITE, margin: 0,
   });
 });
 
-// --- teks tengah: tujuan utama ---
-s.addText('MENINGKATKAN', {
-  x: CX - 1.0, y: CY - 0.78, w: 2.0, h: 0.3, align: 'center', valign: 'middle',
-  fontFace: SANS, fontSize: 12, bold: true, color: MINT, charSpacing: 1, margin: 0,
-});
-s.addText('VAS%', {
-  x: CX - 1.0, y: CY - 0.52, w: 2.0, h: 0.66, align: 'center', valign: 'middle',
-  fontFace: HEAD, fontSize: 36, bold: true, color: WHITE, margin: 0,
-});
-s.addText('36.8%  →  65%', {
-  x: CX - 1.0, y: CY + 0.14, w: 2.0, h: 0.36, align: 'center', valign: 'middle',
-  fontFace: SANS, fontSize: 16, bold: true, color: SEA, margin: 0,
-});
-s.addText('sasaran hospital', {
-  x: CX - 1.0, y: CY + 0.48, w: 2.0, h: 0.28, align: 'center', valign: 'middle',
-  fontFace: SANS, fontSize: 11, color: MUTED, margin: 0,
+// tujuan utama, di atas cakera tengah
+const centre = [
+  ['MENINGKATKAN', 3.24, 0.26, SANS, 12, true, MINT],
+  ['VAS%', 3.51, 0.64, HEAD, 36, true, WHITE],
+  ['36.8%  →  65%', 4.16, 0.36, SANS, 16, true, SEA],
+  ['sasaran hospital', 4.54, 0.28, SANS, 11, false, MUTED],
+];
+centre.forEach(([txt, y, h, face, size, bold, color]) => {
+  s.addText(txt, {
+    x: CX - 1.0, y, w: 2.0, h, align: 'center', valign: 'middle',
+    fontFace: face, fontSize: size, bold, color, margin: 0,
+    charSpacing: txt === 'MENINGKATKAN' ? 1 : 0,
+  });
 });
 
-// --- blok butiran + palang warna ---
+// blok butiran + palang warna
 PHASES.forEach((p) => {
-  const w = 3.75, h = 1.5;
+  const w = 3.6, h = 1.5;
   s.addText(p.items.join('\n'), {
     x: p.bx, y: p.by, w, h, align: p.align, valign: 'middle',
     fontFace: SANS, fontSize: 14, color: BODY, margin: 0, lineSpacing: 30,
@@ -141,30 +112,4 @@ s.addText('Farmasi Klinik Pesakit Luar, HSIS  ·  Okt 2025 – Jun 2026', {
   fontFace: SANS, fontSize: 11, color: MUTED, margin: 0,
 });
 
-// Sudut DrawingML diukur ikut arah jam dari pukul 3 (paksi-y ke bawah),
-// jadi sudut matematik a dipetakan kepada 360 - a.
-const EMPTY = '<a:prstGeom prst="pie"><a:avLst></a:avLst></a:prstGeom>';
-const avLst = (start, end) =>
-  '<a:prstGeom prst="pie"><a:avLst>' +
-  `<a:gd name="adj1" fmla="val ${Math.round(start * 60000)}"/>` +
-  `<a:gd name="adj2" fmla="val ${Math.round(end * 60000)}"/>` +
-  '</a:avLst></a:prstGeom>';
-
-pres.writeFile({ fileName: OUT })
-  .then(() => JSZip.loadAsync(fs.readFileSync(OUT)))
-  .then(async (zip) => {
-    const path = 'ppt/slides/slide1.xml';
-    let xml = await zip.file(path).async('string');
-    const found = xml.split(EMPTY).length - 1;
-    if (found !== PHASES.length) {
-      throw new Error(`Dijangka ${PHASES.length} pie kosong, jumpa ${found}`);
-    }
-    PHASES.forEach((p) => {
-      xml = xml.replace(EMPTY, avLst(360 - p.a2, 360 - p.a1));
-    });
-    zip.file(path, xml);
-    const buf = await zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE' });
-    fs.writeFileSync(OUT, buf);
-    console.log('Ditulis:', OUT);
-    console.log('Sudut pie:', PHASES.map((p) => `${p.key} ${360 - p.a2}-${360 - p.a1}`).join(', '));
-  });
+pres.writeFile({ fileName: OUT }).then(() => console.log('Ditulis:', OUT));
