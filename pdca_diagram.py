@@ -32,13 +32,13 @@ TX = 1.10          # kedudukan mendatar blok teks
 # Wedge dilukis lawan jam dari a1 ke a2; hujung arah jam ialah a1, tempat mata panah.
 PHASES = [
     dict(key='PLAN', word='Rancang', color=TEAL, a1=8, a2=82,
-         items=['Asas 40.8%', 'Sasaran 65%', 'Hipotesis: terlalu bergantung UMP'],
+         items=['Asas 36.8%', 'Sasaran 65%', 'Hipotesis: terlalu bergantung UMP'],
          tx=TX, ty=0.68, ha='left'),
     dict(key='DO', word='Laksana', color=SEA, a1=278, a2=352,
          items=['Pelbagaikan servis', 'eSyms · FPL · IDTF', 'Tambah lokar ubat'],
          tx=TX, ty=-0.68, ha='left'),
     dict(key='CHECK', word='Semak', color=AMBER, a1=188, a2=262,
-         items=['VAS% naik ke 55.35%', 'Kajian penolakan VAS', 'Kelemahan dikenal pasti'],
+         items=['VAS% naik ke 54.3%', 'Kajian penolakan VAS', 'Kelemahan dikenal pasti'],
          tx=-TX, ty=-0.68, ha='right'),
     dict(key='ACT', word='Tindak', color=DEEP, a1=98, a2=172,
          items=['Kekalkan promosi & servis sedia ada',
@@ -93,14 +93,14 @@ ax.text(0, 0.162, 'MENINGKATKAN', ha='center', va='center', color=MINT,
         fontsize=12.5, fontweight='bold', zorder=6)
 ax.text(0, 0.038, 'VAS%', ha='center', va='center', color=WHITE,
         fontsize=38, fontweight='bold', zorder=6)
-ax.text(0, -0.108, '40.8%  →  65%', ha='center', va='center', color=SEA,
+ax.text(0, -0.108, '36.8%  →  65%', ha='center', va='center', color=SEA,
         fontsize=17, fontweight='bold', zorder=6)
 ax.text(0, -0.222, 'sasaran hospital', ha='center', va='center', color=MUTED,
         fontsize=11, zorder=6)
 
 ax.text(0, 1.25, 'KITARAN PDCA', ha='center', va='center', color=INK,
         fontsize=16, fontweight='bold')
-ax.text(0, -1.25, 'Farmasi Klinik Pesakit Luar, HSIS  ·  Q2 2025 – Q2 2026',
+ax.text(0, -1.25, 'Farmasi Klinik Pesakit Luar, HSIS  ·  Okt 2025 – Jun 2026',
         ha='center', va='center', color=MUTED, fontsize=11)
 
 fig.savefig(OUT, dpi=200, transparent=True, bbox_inches='tight', pad_inches=0.3)
