@@ -41,13 +41,13 @@ PHASES = [
          items=['VAS% naik ke 55.35%', 'Kajian penolakan VAS', 'Kelemahan dikenal pasti'],
          tx=-TX, ty=-0.68, ha='right'),
     dict(key='ACT', word='Tindak', color=DEEP, a1=98, a2=172,
-         items=['Kekalkan promosi', 'Kekalkan servis sedia ada',
+         items=['Kekalkan promosi & servis sedia ada',
                 'Projek inovasi servis baharu', 'Borang pengesahan penolakan'],
          tx=-TX, ty=0.68, ha='right'),
 ]
 
 fig, ax = plt.subplots(figsize=(15.5, 9.5), dpi=200)
-fig.patch.set_facecolor(WHITE)
+fig.patch.set_alpha(0)          # latar telus
 ax.set_xlim(-2.2, 2.2)
 ax.set_ylim(-1.35, 1.35)
 ax.set_aspect('equal')
@@ -103,5 +103,5 @@ ax.text(0, 1.25, 'KITARAN PDCA', ha='center', va='center', color=INK,
 ax.text(0, -1.25, 'Farmasi Klinik Pesakit Luar, HSIS  ·  Q2 2025 – Q2 2026',
         ha='center', va='center', color=MUTED, fontsize=11)
 
-fig.savefig(OUT, dpi=200, facecolor=WHITE, bbox_inches='tight', pad_inches=0.3)
+fig.savefig(OUT, dpi=200, transparent=True, bbox_inches='tight', pad_inches=0.3)
 print('Ditulis:', OUT)
