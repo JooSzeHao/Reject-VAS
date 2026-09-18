@@ -35,13 +35,14 @@ PHASES = [
          items=['Asas 40.8%', 'Sasaran 65%', 'Hipotesis: terlalu bergantung UMP'],
          tx=TX, ty=0.68, ha='left'),
     dict(key='DO', word='Laksana', color=SEA, a1=278, a2=352,
-         items=['Pelbagaikan servis', 'eSyms · FPL · IDTF'],
+         items=['Pelbagaikan servis', 'eSyms · FPL · IDTF', 'Tambah lokar ubat'],
          tx=TX, ty=-0.68, ha='left'),
     dict(key='CHECK', word='Semak', color=AMBER, a1=188, a2=262,
          items=['VAS% naik ke 55.35%', 'Kajian penolakan VAS', 'Kelemahan dikenal pasti'],
          tx=-TX, ty=-0.68, ha='right'),
     dict(key='ACT', word='Tindak', color=DEEP, a1=98, a2=172,
-         items=['Kekalkan promosi', 'Kekalkan servis sedia ada'],
+         items=['Kekalkan promosi', 'Kekalkan servis sedia ada',
+                'Projek inovasi servis baharu', 'Borang pengesahan penolakan'],
          tx=-TX, ty=0.68, ha='right'),
 ]
 
