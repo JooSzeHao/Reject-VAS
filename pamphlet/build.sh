@@ -15,3 +15,5 @@ render risalah_vas_b_cetakbesar.html Risalah_VAS_B_CetakBesar.pdf     # B - larg
 render risalah_vas_c_langkah.html    Risalah_VAS_C_Langkah.pdf        # C - three steps
 render risalah_vas_d_pokok.html      Risalah_VAS_D_PokokKeputusan.pdf # D - decision tree
 render risalah_vas_e_pokok.html      Risalah_VAS_E_PokokKeputusan.pdf # E - no FAQ, refined
+
+python3 "$HERE/build_pamphlet.py"   # E in Chinese and Tamil
