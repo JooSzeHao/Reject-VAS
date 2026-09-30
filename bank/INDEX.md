@@ -7,6 +7,9 @@ Untuk mencari: `grep -rin "kata kunci" bank/`
 
 | ID | Tarikh | Kategori | Soalan (ringkas) | Tag |
 |---|---|---|---|---|
+| [TJ-0001](temujanji.md) | 2026-09-30 | Temujanji | Dua TCA di jabatan berbeza: satu atau dua permohonan? | dua tca, jabatan berbeza, permohonan berasingan |
+| [REG-0002](pendaftaran.md) | 2026-09-14 | Pendaftaran | Gagal daftar akaun anak: "maklumat tidak sepadan" | akaun sedia ada, daftar untuk anak |
+| [UMP-0004](ump.md) | 2026-09-14 | UMP | Satu ubat tertinggal daripada penghantaran (Simvor 10mg) | ubat tidak lengkap, ralat sistem, pos semula |
 | [UMP-0003](ump.md) | 2026-09-14 | UMP | Ubat tidak sampai, bungkusan disyaki hilang | bungkusan hilang, pos semula, kelewatan |
 | [UMP-0002](ump.md) | 2026-09-11 | UMP | Aduan: menyangka bekalan ubat dibatalkan selepas permohonan lewat | permohonan lewat, ambil di kaunter, aduan |
 | [UMP-0001](ump.md) | 2026-09-11 | UMP | Bila akan dapat bekalan ubat seterusnya | tarikh bekalan, status penghantaran, nombor penjejakan |

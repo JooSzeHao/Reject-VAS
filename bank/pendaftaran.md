@@ -49,3 +49,30 @@ Terima kasih.
 <!-- Belum diputuskan: bagi pesakit yang langsung tiada alamat e-mel, set semula kata
 laluan tidak akan berfungsi. Manual MyUbat menyatakan mereka perlu terus mendapatkan
 bantuan di kaunter farmasi KKM. Sahkan sama ada jawapan patut menyebut kes ini. -->
+
+## [REG-0002] 2026-09-14 — Gagal daftar akaun anak: "maklumat tidak sepadan"
+**Kategori:** REG · **Tag:** akaun sedia ada, daftar untuk anak, maklumat tidak sepadan, set semula kata laluan, akaun berbilang
+**Soalan pesakit:**
+> Saya ingin memohon bantuan berkaitan pendaftaran akaun baharu untuk anak saya. Seperti dalam tangkapan skrin yang disertakan, saya tidak dapat meneruskan pendaftaran kerana sistem menyatakan maklumat yang diberikan tidak sepadan. Namun, saya telah menyemak dan pasti semua maklumat yang dimasukkan adalah betul.
+> (Soalan asal dalam bahasa Inggeris.)
+
+**Jawapan:**
+Salam sejahtera,
+
+Untuk makluman, satu nombor kad pengenalan hanya boleh didaftarkan dengan satu akaun MyUbat sahaja. Akaun bagi anak anda telah pun wujud, jadi pendaftaran baharu tidak dapat diteruskan.
+
+Jika tidak dapat log masuk, sila guna fungsi "Terlupa Kata Laluan" di skrin log masuk. Kod pengesahan 6 digit akan dihantar ke e-mel yang digunakan semasa pendaftaran untuk menetapkan kata laluan baharu.
+
+Sekiranya masih tidak berjaya, sila hubungi Farmasi di talian 03-8947 5555 (samb. 1113).
+
+Terima kasih.
+
+**Rujukan:** REG-0001 (jawapan diguna semula); knowledge/panduan-myubat.md (satu kad pengenalan satu akaun; Terlupa kata laluan).
+**Keyakinan:** Tinggi
+**Nota pegawai:** Draf tidak dibantah, tetapi persetujuan muktamad tidak dinyatakan secara jelas — sahkan jika perlu dipinda.
+**Status:** Dihantar
+
+<!-- Berbeza dengan REG-0001: di sini pesakit TIDAK tahu akaun sudah wujud, jadi
+fakta itu dinyatakan kerana ia menjawab terus soalan "kenapa maklumat tidak sepadan".
+Tidak disertakan: fungsi Akaun Berbilang (ahli keluarga pada peranti yang sama),
+yang mungkin membantu ibu bapa seperti ini. Sahkan sama ada patut ditambah. -->

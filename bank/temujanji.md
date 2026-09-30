@@ -24,3 +24,21 @@ Awalan ID bagi fail ini ialah `TJ`. Nombor bermula dari 0001 dan bertambah satu 
 ---
 
 <!-- Rekod bermula di bawah. Rekod baharu ditambah di hujung fail. -->
+
+## [TJ-0001] 2026-09-30 — Dua temu janji (TCA) di jabatan berbeza: satu atau dua permohonan?
+**Kategori:** TJ · **Tag:** dua tca, jabatan berbeza, mopd, oftalmologi, permohonan berasingan, preskripsi berbeza
+**Soalan pesakit:**
+> Ibu saya mempunyai dua tarikh temu janji doktor (TCA) di jabatan yang berbeza, MOPD dan Mata. Perlukah saya memohon dua bekalan ubat secara berasingan atau satu bekalan sudah mencukupi? — [NAMA]
+> (Soalan asal dalam bahasa Inggeris.)
+
+**Jawapan:**
+Salam sejahtera,
+
+Mohon buat permohonan berasingan bagi kedua-dua temu janji tersebut, kerana ia melibatkan dua preskripsi yang berbeza daripada dua jabatan yang berbeza.
+
+Terima kasih.
+
+**Rujukan:** Disahkan oleh pegawai (30/9/2026). Kini direkod dalam knowledge/panduan-myubat.md — satu permohonan bagi setiap preskripsi.
+**Keyakinan:** Tinggi
+**Nota pegawai:** Permohonan berasingan bagi setiap preskripsi/jabatan.
+**Status:** Dihantar

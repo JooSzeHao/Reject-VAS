@@ -66,6 +66,10 @@ ubat** dan maklumat bayaran. Bayaran boleh dibuat **atas talian (online)** atau
 ### Bekalan ubat susulan
 
 - Skrin **Bekalan** menyenaraikan rekod temu janji bagi pembekalan ubat susulan.
+- **Satu permohonan bagi setiap preskripsi.** Jika pesakit mempunyai lebih daripada
+  satu temu janji (TCA) di jabatan yang berbeza — contohnya MOPD dan Oftalmologi —
+  setiap satu melibatkan preskripsi yang berbeza, jadi permohonan perlu dibuat
+  **berasingan** bagi setiap temu janji. (Disahkan oleh pegawai, 30/9/2026.)
 - **Semak/Tukar** — papar maklumat tambahan bagi janji temu sedia ada.
 - **Mohon Baru** — buat permohonan baharu.
 

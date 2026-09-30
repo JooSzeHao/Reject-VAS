@@ -94,3 +94,27 @@ Terima kasih.
 semula) dan beritahu nombor penjejakan baharu akan muncul dalam MyUbat.
 Nota: soalan pesakit dalam bahasa Inggeris, jawapan tetap dalam Bahasa Malaysia
 mengikut keputusan pegawai semasa penyediaan sistem ini. -->
+
+## [UMP-0004] 2026-09-14 — Satu ubat tertinggal daripada penghantaran (Simvor 10mg)
+**Kategori:** UMP · **Tag:** ubat tidak lengkap, ralat sistem, pos semula, simvastatin, stok
+**Soalan pesakit:**
+> Pada 11 September, penghantaran ubat telah sampai ke rumah, tetapi kekurangan ubat kolesterol iaitu Simvor 10mg (Simvastatin 10mg). Adakah tiada stok? Bila boleh hantar ubat ini? Bapa mertua saya sudah kehabisan ubat.
+
+**Jawapan:**
+Salam sejahtera,
+
+Mohon maaf atas kekurangan ini. Ubat Simvor 10mg (Simvastatin 10mg) tidak kehabisan stok — ia tertinggal kerana ralat sistem yang tersilap merekodkan bekalan sebagai telah lengkap dihantar.
+
+Kami akan memposkan ubat tersebut hari ini. Nombor penjejakan akan dipaparkan dalam aplikasi MyUbat setelah ubat diposkan.
+
+Terima kasih.
+
+**Rujukan:** knowledge/perkhidmatan-vas-hsis-serdang.md (UMP — nombor penjejakan dipaparkan dalam MyUbat setelah ubat diposkan). Punca (ralat sistem) dan tindakan pos semula disahkan oleh pegawai.
+**Keyakinan:** Tinggi
+**Nota pegawai:** Punca dan tindakan diberikan oleh pegawai. Draf tidak dibantah, tetapi persetujuan muktamad tidak dinyatakan secara jelas — sahkan jika perlu dipinda.
+**Status:** Dihantar
+
+<!-- Corak: ubat tidak lengkap. Kegagalan di pihak kami, jadi mohon maaf. Jawab
+kedua-dua soalan pesakit: (1) bukan masalah stok, (2) bila akan dihantar. Belum
+disahkan sama ada punca dalaman ("ralat sistem") patut dinyatakan terus kepada
+pesakit atau diringkaskan sebagai "ralat teknikal". -->
